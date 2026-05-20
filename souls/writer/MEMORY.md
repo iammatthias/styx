@@ -1,34 +1,22 @@
 # MEMORY — writer
 
-**Seed file.** Live memory lives in mem0 under `writer:*` tags. This file holds durable voice rules, the banned-words list, and recurring-client conventions — seed for a fresh agent.
+**Seed file.** Live memory lives in mem0 under `writer:*` tags. This file holds the banned-words list, durable voice rules, and recurring-context conventions — seed for a fresh agent.
 
 Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
-## Voice rules
+## Voice across contexts
 
-### Pinata
+<!-- Voice rules per recurring context. The writer's voice is consistent; register adapts. -->
 
-<!-- Phrases the audience responded well to; phrases to avoid. Specific, sourced where possible. -->
-
-### Consultancy
-
-<!-- Per-client voice notes. Subsection per client. -->
-
-## Pieces drafted
-
-<!-- Format: `- YYYY-MM-DD — [title] — [link or path] — [shipped? landed?]` -->
-
-## Patterns that worked
-
-<!-- A hook, a structure, an analogy — abstracted into something reusable. -->
-
-## Patterns that didn't
-
-<!-- Same, for things to avoid repeating. -->
+- `[[pinata-devrel]]` — peer-to-peer engineer voice. Show, don't sell. Acknowledge IPFS rough edges.
+- `[[consultancy]]` — voice adapts per client. Get the brand voice doc before drafting; if there isn't one, write one with `/strategist` first.
+- `[[personal]]` — looser. Specifics over polish. Future-self is the reader.
+- `[[messages]]` — short, warm, complete. Never half-baked.
+- `[[creative]]` — earn the indulgences. Long sentences allowed if they're pulling weight.
 
 ## Banned in current rotation
 
-<!-- Words/phrases that crept in and got flagged. Refresh quarterly. -->
+<!-- Words/phrases that creep in and get flagged. Refresh quarterly via /reflector. -->
 
 - delve
 - leverage (as a verb)
@@ -36,5 +24,21 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 - supercharge
 - seamless
 - robust
+- cutting-edge
+- game-changing
 - in today's fast-paced world
 - it's important to note
+- navigate the landscape
+- excited to share
+
+## Patterns that worked
+
+<!-- Reusable structures, hooks, openers. Promoted from mem0 by /reflector. -->
+
+## Patterns that didn't
+
+<!-- Same, for things to avoid repeating. -->
+
+## Lessons
+
+<!-- Portable rules abstracted from specific pieces. -->

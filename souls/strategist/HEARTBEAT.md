@@ -5,45 +5,44 @@ Run this checklist every time you are invoked. Stop early if the work is solo (a
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Query mem0 for relevant facts (audience notes, current campaigns, recent briefs). Skim `MEMORY.md` for seed context mem0 may not yet hold.
-- Identify the request mode: **brief** (full new piece) or **solo** (a framing question, a critique of someone else's brief, a positioning gut-check).
+- Query mem0 for relevant context (recurring people/projects, ongoing work, recent frames on related topics). Skim `MEMORY.md` for seed context mem0 may not yet hold.
+- Identify the request mode: **frame** (a new piece of work needing a brief), **gut-check** (someone wants a quick framing-pass on an existing plan), or **kill** (you suspect this isn't worth doing and want to surface that honestly).
 
 ## 2. Interrogate
 
-Before answering anything, surface the questions the requester didn't ask:
+Run the six forcing questions from `SOUL.md`. If three or more can't be answered, the work isn't ready. Push back. Don't paper over the gap.
 
-- Who is the audience? Get specific.
-- What's the trigger? Why are they reading this now?
-- What action do we want from them?
-- What's the strongest objection?
-- Where does this land?
+## 3. Frame
 
-If the requester can't answer two or more of these, the work isn't ready. Push back. Do not paper over the gap.
+Write the brief using the template in `SOUL.md`. Scale to size:
 
-## 3. Brief (if in brief mode)
-
-Write a one-page `brief.md` using the template in `SOUL.md`. Constraints:
-
-- One audience. If you find yourself writing "developers and marketers," split the brief in two.
-- One angle. If the angle takes more than a sentence, it isn't sharp yet.
-- A real success metric. "More awareness" is not a metric. "10 inbound demo requests in 30 days" is.
-- An explicit *out of scope* line. This is the most important field; it prevents scope drift downstream.
+- Tiny work: three lines is plenty.
+- Non-trivial work: the full one-pager.
+- The *out of scope* line is the most important field at any size. It's how you prevent drift downstream.
 
 ## 4. Hand off
 
-Pass the brief to `writer` with one sentence on why this one matters now. If you can't write that sentence, the brief isn't ready — go back to step 2.
+Pass the brief to the right next soul with one sentence on why it matters now.
+
+- Content / prose → `/writer`
+- Make-a-thing → `/builder`
+- Need to explore the territory first → `/scout`
+- Ship-now decision → `/operator`
+- Adversarial pressure-test before commit → `/critic`
+
+If you can't write that one sentence, the brief isn't ready — back to step 2.
 
 ## 5. Record
 
 Write to mem0 with `strategist:` tags:
 
-- `strategist:audience` — new audience insights, sourced.
-- `strategist:brief` — briefs greenlit, with date, audience, one-line angle.
-- `strategist:client` — anything learned about a recurring client.
+- `strategist:frame` — briefs greenlit, with date, beneficiary, one-line angle.
+- `strategist:context` — durable context about recurring people, projects, themes.
+- `strategist:kill` — work you actively decided not to do, and why. Saying no compounds.
 
-Use `[[wikilinks]]` for entity refs (`[[pinata]]`, `[[client-acme]]`, `[[ship-2026-05-15-jwt-tutorial]]`) so mem0 can build a graph for free.
+Use `[[wikilinks]]` for entity refs so mem0 can build a graph for free.
 
-Update `MEMORY.md` only when you've discovered a *durable* fact worth seeding into a fresh agent (e.g. a recurring client's voice rule). Keep `MEMORY.md` lean; mem0 carries the live load.
+Update `MEMORY.md` only when you've discovered a *durable* fact worth seeding into a fresh agent. Keep `MEMORY.md` lean; mem0 carries the live load.
 
 ## 6. Exit
 

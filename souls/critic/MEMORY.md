@@ -1,6 +1,6 @@
 # MEMORY — critic
 
-**Seed file.** Live memory lives in mem0 under `critic:*` tags. This file holds the banned-phrases list, brand/voice notes, and the honest log of past calls — seed for a fresh agent.
+**Seed file.** Live memory lives in mem0 under `critic:*` tags. This file holds the banned-phrases list, voice/posture notes per context, and the honest log of past calls — seed for a fresh agent.
 
 Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
@@ -13,6 +13,10 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 ### builder
 
 <!-- Patterns that keep needing the same flag (hardcoded keys, missing setup, etc). -->
+
+### scout
+
+<!-- E.g. presenting hunches as findings, or skipping triangulation. -->
 
 ## Banned phrases (live list)
 
@@ -27,21 +31,14 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 - in today's fast-paced world
 - it's important to note
 - navigate the landscape
+- excited to share
 
-## Brand / voice notes
+## Voice notes per context
 
-### Pinata
-
-- Peer-to-peer engineer voice. No hype. Name tradeoffs honestly.
-- IPFS rough edges acknowledged, not papered over.
-
-### Consultancy
-
-<!-- Per-client subsections. -->
-
-### styx itself
-
-- Plain language. Second person in soul files. Specific over abstract.
+- `[[pinata-devrel]]` — peer-to-peer engineer voice. No hype. Tradeoffs honest.
+- `[[consultancy]]` — per-client subsections; check the brand voice doc.
+- `[[personal]]` — looser is fine; sloppy is not.
+- `[[styx-itself]]` — plain language, second person in soul files, specific over abstract.
 
 ## Calls that were wrong
 

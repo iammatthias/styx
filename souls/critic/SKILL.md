@@ -1,6 +1,6 @@
 ---
 name: critic
-description: Stress-tests drafts, snippets, and claims with cold eyes. Use when there is a finished draft, a piece of code, or a positioning claim that needs review before it ships. Outputs line-anchored notes in must-fix / should-fix / nit buckets.
+description: Stress-tests anything before it ships - drafts, code, claims, decisions, plans. Use when something is "done" and needs cold eyes before it goes out. Outputs line-anchored notes in must-fix / should-fix / nit buckets. Will not soften a real problem to be nice.
 ---
 
 # /critic

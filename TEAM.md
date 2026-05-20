@@ -1,37 +1,44 @@
 # TEAM.md
 
-How the five souls compose. Read this once; refer back when a handoff feels stuck.
+How the souls compose. Read this once; refer back when a handoff feels stuck.
 
-## The loop
+## Solo mode is the default
+
+Most invocations are one soul, full stop. You ask the agent something; it picks the soul that fits (or stays in the default soul) and answers. There is no orchestration tax to pay for a sentence, a snippet, a quick scout, a one-off message.
+
+- "Help me think through whether to take this meeting" → `/strategist`
+- "Rewrite this paragraph so it stops sounding like a press release" → `/writer`
+- "Fix this script that's throwing on empty input" → `/builder`
+- "What are people using instead of Postgres for embedded vector search in 2026?" → `/scout`
+- "Tear apart this PR description" → `/critic`
+- "Schedule this thread and post it Tuesday morning" → `/operator`
+- "Friday retro across the week" → `/reflector`
+
+The crew exists so the agent can pick a sharper posture when one exists. Most days, one soul is plenty.
+
+## The loop (when you need it)
+
+For net-new work where the stakes justify the orchestration tax, the crew composes into a loop. Frame → make → review → ship. Reflect over the whole.
 
 ```
-        strategist  ──►  writer  ──►  builder  ──►  critic  ──►  operator
-            ▲                                                        │
-            └────────────────────────────────────────────────────────┘
-                         (feedback: what shipped, what landed)
+   ┌──► scout ───┐
+   │             ▼
+strategist  ──►  writer / builder  ──►  critic  ──►  operator
+   ▲                                                    │
+   └────────────────────────────────────────────────────┘
+                  (feedback: what landed, what didn't)
 
-                              reflector
-                  (weekly / post-ship — patterns, prunes, rules)
+                       reflector
+        (weekly / post-notable-ship — patterns, prunes, rules)
 ```
 
-Five stations in the active loop. `reflector` sits outside on a cadence — it reads what each soul did and writes portable rules back into mem0 and the seed `MEMORY.md` files.
+- **Scout** sits before *or* in parallel with strategist when the territory is unknown — frame what you don't have to first.
+- **Writer and builder** are the two making-shapes; they run in parallel when a piece needs both prose and code.
+- **Critic** comes before any external ship; the bar is higher the more irreversible the action.
+- **Operator** ships, then reports back.
+- **Reflector** sits outside the loop, on a cadence.
 
-## Stations
-
-**Think — `strategist`**
-Frames the work. Answers: who is this for, why does it matter now, what does winning look like, what are we *not* doing. Outputs a one-page brief.
-
-**Plan / Build — `writer`**
-Turns the brief into an outline, then a draft. Owns voice and structure. Pulls the `builder` in when the draft needs working code or a real demo to be honest.
-
-**Build — `builder`**
-Writes the code that proves the words. Treats every snippet as something a stranger will paste into a terminal. If the snippet doesn't run, the draft doesn't ship.
-
-**Review — `critic`**
-Reads the draft and the code with cold eyes. Checks facts, voice, brand fit, and whether the piece earns its claims. Sends it back to `writer`/`builder` until it does.
-
-**Ship — `operator`**
-Pushes the artifact to its homes — blog, docs site, social, newsletter, community channels. Watches what lands and what doesn't. Reports back to `strategist` so the next brief is sharper.
+Use the loop when the work is non-trivial, multi-step, and worth orchestrating. Skip it otherwise.
 
 ## Handoffs
 
@@ -39,38 +46,29 @@ A handoff is the only place where work changes hands. Everything else is solo wo
 
 | From → To | Artifact | "Done" means |
 |---|---|---|
-| `strategist` → `writer` | `brief.md` | Audience, goal, angle, success metric named |
-| `writer` → `builder` | draft with `// builder: ...` markers | Code requirements explicit, no hand-waving |
-| `builder` → `writer` | working snippets + repo link | Snippets run from a clean clone |
-| `writer` → `critic` | finished draft | Self-edit pass done, claims footnoted |
-| `critic` → `writer`/`builder` | review notes | Specific, line-anchored, actionable |
-| `critic` → `operator` | approved artifact | Critic signed off, not just acquiesced |
-| `operator` → `strategist` | ship report | What posted, what landed, what didn't |
-
-## Solo mode
-
-Most days you don't run the loop. You invoke one soul.
-
-- "Draft a positioning angle for X" → `/strategist`
-- "Turn this transcript into a blog post" → `/writer`
-- "Make a clean Pinata SDK example for Y" → `/builder`
-- "Tear apart this draft" → `/critic`
-- "Schedule this thread and find the right hashtags" → `/operator`
-- "Friday retro" → `/reflector`
-
-Solo mode is the default. The loop is for net-new pieces where the stakes justify the orchestration tax.
+| `/strategist` → `/writer` or `/builder` | brief | Beneficiary, "done" condition, angle, out-of-scope named |
+| `/strategist` → `/scout` | scout question | Question stated, budget set |
+| `/scout` → `/strategist` | field-notes report | Found / Pattern / Hunch / Open — labeled, sourced |
+| `/writer` → `/builder` | draft with `// builder: …` markers | Code requirements explicit, no hand-waving |
+| `/builder` → `/writer` | working snippets + repo link | Runs from a clean state |
+| `/writer` or `/builder` → `/critic` | finished artifact | Self-edit pass done, claims sourced |
+| `/critic` → `/writer` or `/builder` | review notes | Specific, line-anchored, actionable |
+| `/critic` → `/operator` | approved artifact | Critic signed off, not just acquiesced |
+| `/operator` → `/strategist` | ship report | What posted, what landed, what didn't |
 
 ## Memory model
 
-The loop runs on mem0 (live) + `MEMORY.md` seed files. Each soul reads its tags at orient and writes new facts at exit. Wikilinks (`[[brief-x]]`, `[[ship-y]]`) cross-reference between souls without duplication. `/reflector` prunes both layers on cadence.
-
-## Anti-patterns
-
-- **One soul doing two jobs.** If `writer` is also fact-checking itself, the piece is under-reviewed. Hand off.
-- **Skipping the strategist.** Briefless work drifts. If you can't write the brief, you don't have the piece yet.
-- **Critic as cheerleader.** A `critic` that ships everything is broken. Replace or retune.
-- **Operator as afterthought.** Distribution is half the work. Plan the ship before you write the draft.
+The crew runs on mem0 (live) + `MEMORY.md` seed files. Each soul reads its tags at orient and writes new facts at exit. Wikilinks (`[[entity]]`) cross-reference between souls without duplication. `/reflector` prunes both layers on cadence.
 
 ## Ownership of shared facts
 
-Shared facts (audience profiles, brand voice, repeat clients, ongoing campaigns) live in the soul that *owns* them and get referenced via wikilink — never duplicated. When two souls need the same fact, the upstream soul owns it. `/reflector` enforces this on cadence; if you find the same fact in two places, route it to one and replace the other with a wikilink.
+Shared facts (recurring contexts, brand voice rules, repeat clients, ongoing projects) live in the soul that *owns* them and get referenced via wikilink — never duplicated. When two souls need the same fact, the upstream soul owns it. `/reflector` enforces this; if you find the same fact in two places, route it to one and replace the other with a wikilink.
+
+## Anti-patterns
+
+- **Loop tax on tiny work.** A one-line message doesn't need a brief, a draft, a review, and a ship report. Solo mode exists for a reason.
+- **Skipping the strategist on serious work.** Frameless serious work drifts. If you can't write the brief, you don't have the piece.
+- **Skipping the scout on unknown territory.** Strategist frames; scout explores. The order matters.
+- **Critic as cheerleader.** A `/critic` that ships everything is broken.
+- **Operator as afterthought.** Distribution is half the work. Plan the ship before you write the draft.
+- **Reflector running mid-work.** Reflection happens *between* pieces, not during them.

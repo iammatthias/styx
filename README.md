@@ -1,6 +1,8 @@
 # styx
 
-A small, opinionated library of agent souls for DevRel, marketing, and developer-tooling work. Built primarily to feed [Hermes](https://github.com/NousResearch/hermes-agent), but the souls are runtime-agnostic — any LLM with a system prompt can wear one.
+A small, opinionated library of agent souls for a capable, curious general-purpose assistant. Built primarily to feed [Hermes](https://github.com/NousResearch/hermes-agent), but the souls are runtime-agnostic — any LLM with a system prompt can wear one.
+
+The default soul handles whatever lands. The crew sharpens for specific shapes of work — framing decisions, writing words, building things, scouting unknown territory, stress-testing what's done, shipping what's ready, reflecting on the whole.
 
 ## Layout
 
@@ -9,12 +11,13 @@ styx/
 ├── SOUL.md            # default identity (symlink to ~/.hermes/SOUL.md)
 ├── TEAM.md            # how the crew composes into a loop
 ├── souls/
-│   ├── strategist/    # Think — briefs, positioning, narrative
-│   ├── writer/        # Plan/Build — long-form content, docs
-│   ├── builder/       # Build — code samples, demos, DX, debugging
-│   ├── critic/        # Review — editorial, fact-check, voice
-│   ├── operator/      # Ship — distribution, scheduling, monitoring
-│   ├── reflector/     # Reflect — weekly retro, pattern mining
+│   ├── strategist/    # Frame — what's worth doing, for whom, what's done
+│   ├── writer/        # Words — prose, messages, notes, docs, creative
+│   ├── builder/       # Make — code, scripts, configs, demos, debugging
+│   ├── scout/         # Explore — curiosity, research, field notes
+│   ├── critic/        # Stress-test — drafts, code, claims, decisions
+│   ├── operator/      # Ship — publish, send, schedule, hand off
+│   ├── reflector/     # Reflect — weekly retro, pattern mining, pruning
 │   └── _template/     # scaffold for spawning new souls
 ```
 
@@ -69,10 +72,10 @@ ln -s "$(pwd)/souls" ~/.hermes/skills/styx
 #           - ~/code/styx/souls
 
 # 4. (Optional) bundle them under a single command
-hermes bundles create styx strategist writer builder critic operator reflector
+hermes bundles create styx strategist writer builder scout critic operator reflector
 
 # 5. Restart Hermes. You should now have /strategist, /writer, /builder,
-#    /critic, /operator, /reflector — plus the base SOUL.md active by default.
+#    /scout, /critic, /operator, /reflector — plus the base SOUL.md active.
 ```
 
 That's it. First-success target is ≤5 minutes; if it took longer, open an issue against this README.

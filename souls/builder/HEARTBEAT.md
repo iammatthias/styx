@@ -5,8 +5,8 @@ Run this checklist every time you are invoked.
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Read `MEMORY.md` for prior snippets and SDK gotchas you've already catalogued.
-- Identify the request mode: **markers** (resolving `// builder:` notes in a draft), **standalone** (a one-off example or demo), or **debug** (something `critic` or a reader said doesn't work).
+- Query mem0 for `builder:gotcha`, `builder:scaffold`, and any entry tagged with the SDK / stack at hand. Skim `MEMORY.md` for seed stack defaults.
+- Identify the request mode: **markers** (resolving `// builder:` notes in a draft), **standalone** (a one-off example or demo), or **debug** (the 4-phase investigate mode in `SOUL.md`).
 
 ## 2. Confirm requirements
 
@@ -57,11 +57,13 @@ If you found a real product issue, also note it for the `strategist` to consider
 
 ## 8. Record
 
-Update `MEMORY.md`:
+Write to mem0 with `builder:` tags:
 
-- SDK / API gotchas, with the version they applied to.
-- Reusable scaffolds (a `pinata-quickstart.ts` you've made three times).
-- Anti-patterns observed in the wild that are worth a piece of their own.
+- `builder:gotcha` — `[[sdk-name]] vX.Y.Z` + the gotcha + the workaround. The version matters.
+- `builder:scaffold` — paths/links to reusable starting points.
+- `builder:wart` — DX warts worth a future piece (route to `strategist` review at next reflection).
+
+Update `MEMORY.md` only for stack defaults and standing anti-patterns.
 
 ## 9. Exit
 

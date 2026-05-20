@@ -1,6 +1,8 @@
 # MEMORY — strategist
 
-Durable facts the strategist should remember across sessions. Append-only-ish. Prune when an entry becomes false, not when it becomes old.
+**Seed file.** Live memory lives in mem0 under `strategist:*` tags. This file holds durable seed rules and recurring-client conventions a fresh agent should boot with — not the day-to-day facts.
+
+Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
 ## Audiences
 

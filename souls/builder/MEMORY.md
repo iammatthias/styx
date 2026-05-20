@@ -1,6 +1,8 @@
 # MEMORY — builder
 
-Durable facts the builder should remember across sessions.
+**Seed file.** Live memory lives in mem0 under `builder:*` tags. This file holds stack defaults and standing anti-patterns — seed for a fresh agent. Day-to-day gotchas (with SDK versions) go to mem0.
+
+Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
 ## SDK / API gotchas
 

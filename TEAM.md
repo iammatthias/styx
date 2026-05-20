@@ -9,9 +9,12 @@ How the five souls compose. Read this once; refer back when a handoff feels stuc
             ▲                                                        │
             └────────────────────────────────────────────────────────┘
                          (feedback: what shipped, what landed)
+
+                              reflector
+                  (weekly / post-ship — patterns, prunes, rules)
 ```
 
-Five stations. Each soul knows its station and the one downstream of it.
+Five stations in the active loop. `reflector` sits outside on a cadence — it reads what each soul did and writes portable rules back into mem0 and the seed `MEMORY.md` files.
 
 ## Stations
 
@@ -48,13 +51,18 @@ A handoff is the only place where work changes hands. Everything else is solo wo
 
 Most days you don't run the loop. You invoke one soul.
 
-- "Draft a positioning angle for X" → `strategist`
-- "Turn this transcript into a blog post" → `writer`
-- "Make a clean Pinata SDK example for Y" → `builder`
-- "Tear apart this draft" → `critic`
-- "Schedule this thread and find the right hashtags" → `operator`
+- "Draft a positioning angle for X" → `/strategist`
+- "Turn this transcript into a blog post" → `/writer`
+- "Make a clean Pinata SDK example for Y" → `/builder`
+- "Tear apart this draft" → `/critic`
+- "Schedule this thread and find the right hashtags" → `/operator`
+- "Friday retro" → `/reflector`
 
 Solo mode is the default. The loop is for net-new pieces where the stakes justify the orchestration tax.
+
+## Memory model
+
+The loop runs on mem0 (live) + `MEMORY.md` seed files. Each soul reads its tags at orient and writes new facts at exit. Wikilinks (`[[brief-x]]`, `[[ship-y]]`) cross-reference between souls without duplication. `/reflector` prunes both layers on cadence.
 
 ## Anti-patterns
 
@@ -63,6 +71,6 @@ Solo mode is the default. The loop is for net-new pieces where the stakes justif
 - **Critic as cheerleader.** A `critic` that ships everything is broken. Replace or retune.
 - **Operator as afterthought.** Distribution is half the work. Plan the ship before you write the draft.
 
-## Memory
+## Ownership of shared facts
 
-Each soul keeps its own `MEMORY.md`. Shared facts (audience profiles, brand voice, repeat clients, ongoing campaigns) live in the soul that owns them and get referenced — never duplicated. When two souls need the same fact, the upstream soul owns it.
+Shared facts (audience profiles, brand voice, repeat clients, ongoing campaigns) live in the soul that *owns* them and get referenced via wikilink — never duplicated. When two souls need the same fact, the upstream soul owns it. `/reflector` enforces this on cadence; if you find the same fact in two places, route it to one and replace the other with a wikilink.

@@ -1,6 +1,8 @@
 # MEMORY — operator
 
-Durable facts the operator should remember across sessions.
+**Seed file.** Live memory lives in mem0 under `operator:*` tags. This file holds default channels per audience, audience time-zone defaults, and "don't repeat" entries — seed for a fresh agent.
+
+Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
 ## Channels
 

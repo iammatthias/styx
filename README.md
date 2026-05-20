@@ -6,18 +6,26 @@ A small, opinionated library of agent souls for DevRel, marketing, and developer
 
 ```
 styx/
-├── SOUL.md            # default identity (this is what lives at ~/.hermes/SOUL.md)
+├── SOUL.md            # default identity (symlink to ~/.hermes/SOUL.md)
 ├── TEAM.md            # how the crew composes into a loop
 ├── souls/
 │   ├── strategist/    # Think — briefs, positioning, narrative
 │   ├── writer/        # Plan/Build — long-form content, docs
-│   ├── builder/       # Build — code samples, demos, DX checks
+│   ├── builder/       # Build — code samples, demos, DX, debugging
 │   ├── critic/        # Review — editorial, fact-check, voice
 │   ├── operator/      # Ship — distribution, scheduling, monitoring
+│   ├── reflector/     # Reflect — weekly retro, pattern mining
 │   └── _template/     # scaffold for spawning new souls
 ```
 
-The root `SOUL.md` is the base identity. The crew in `souls/*` are specialty personas that overlay or replace it for shaped work. The default soul knows when to switch — and when to spawn a new one.
+Each soul folder contains:
+- `SOUL.md` — identity, posture, refusals, deliverable shape
+- `HEARTBEAT.md` — per-wake checklist
+- `SKILL.md` — agentskills.io frontmatter so Hermes can discover and load it on demand
+- `TOOLS.md` — codex vs claude-code-via-delegate_task routing rules
+- `MEMORY.md` — seed file with durable rules (live memory lives in mem0)
+
+The root `SOUL.md` is the base identity. The crew in `souls/*` are specialty personas, discoverable via Hermes's native skill system. The default soul knows when to switch — and when to spawn a new one.
 
 ## Lineage
 
@@ -43,21 +51,55 @@ Five souls. They compose into a loop, but each works standalone.
 
 See [`TEAM.md`](./TEAM.md) for the loop and the handoffs.
 
-## Using a soul
-
-**With Hermes (primary target).** Hermes loads its base identity from `$HERMES_HOME/SOUL.md`. Symlink (or copy) the root soul there:
+## Quickstart (Hermes, 5 minutes)
 
 ```bash
+# 1. Clone styx (or wherever you keep it)
+git clone <styx-remote> ~/code/styx && cd ~/code/styx
+
+# 2. Wire the base soul as Hermes's identity
 ln -s "$(pwd)/SOUL.md" ~/.hermes/SOUL.md
+
+# 3. Register the crew as skills (one of these two)
+#    a) symlink — keeps styx editable in place
+ln -s "$(pwd)/souls" ~/.hermes/skills/styx
+#    b) or add an external skills dir in ~/.hermes/config.yaml
+#       skills:
+#         external_dirs:
+#           - ~/code/styx/souls
+
+# 4. (Optional) bundle them under a single command
+hermes bundles create styx strategist writer builder critic operator reflector
+
+# 5. Restart Hermes. You should now have /strategist, /writer, /builder,
+#    /critic, /operator, /reflector — plus the base SOUL.md active by default.
 ```
 
-Overlay a specialty soul for a session with `/personality writer` (or `builder`, `critic`, etc.). The root soul's "crew" section tells Hermes when to suggest a switch itself.
+That's it. First-success target is ≤5 minutes; if it took longer, open an issue against this README.
 
-**With Claude Code / Cursor / a plain LLM.** Include the desired `SOUL.md` + `HEARTBEAT.md` in the system prompt; mount the soul folder as writable so `MEMORY.md` updates persist.
+## Using a soul
 
-**With paperclip.** Each soul folder maps directly to a paperclip agent home. Point `$AGENT_HOME` at the soul.
+Three Hermes-native ways to invoke a soul, in increasing isolation:
 
-A soul should be self-explanatory after one read. If it needs more than a paragraph of out-of-band setup, fix the soul, not the docs.
+1. **`/<name>`** — load as a skill via progressive disclosure. Hermes injects the soul's description into the Level-0 list, loads full content on demand. Best for one-shot work.
+2. **`/personality <name>`** — overlay the soul as the active identity for the session. Best when the whole conversation is about that soul's work.
+3. **`delegate_task` with the soul's path** — spawn an isolated sub-agent wearing the soul, fresh context. Best when the work is independent and you don't want it consuming this conversation's context.
+
+The default soul (`SOUL.md` at root) knows when to switch and announces the change ("switching into writer for the draft") so you can see the posture shift.
+
+### With other runtimes
+
+- **Claude Code / Cursor / plain LLM** — include the desired `SOUL.md` + `HEARTBEAT.md` in the system prompt; mount the soul folder writable so seed `MEMORY.md` updates persist.
+- **paperclip** — each soul folder maps directly to a paperclip agent home. Point `$AGENT_HOME` at the soul.
+
+## Memory and mem0
+
+Two layers, intentionally:
+
+- **mem0** holds the live, dynamic memory — read at orient, written at record. Each soul writes with a tag prefix (`writer:voice`, `builder:gotcha`, etc.) so queries stay scoped.
+- **`MEMORY.md`** (per soul) is the seed file. Durable rules, banned-words lists, recurring-client conventions. What a fresh mem0 instance should boot with.
+
+Cross-reference entities with `[[wikilinks]]` (`[[pinata]]`, `[[client-acme]]`, `[[ship-2026-05-15-jwt]]`). mem0 picks these up for graph-style lookups. `/reflector` prunes both layers on cadence.
 
 ## Adding a soul (and emergence)
 

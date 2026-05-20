@@ -1,6 +1,8 @@
 # MEMORY — critic
 
-Durable facts the critic should remember across sessions.
+**Seed file.** Live memory lives in mem0 under `critic:*` tags. This file holds the banned-phrases list, brand/voice notes, and the honest log of past calls — seed for a fresh agent.
+
+Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
 ## Recurring tics
 

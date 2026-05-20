@@ -5,7 +5,7 @@ Run this checklist every time you are invoked.
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Read `MEMORY.md` for client voice notes and prior pieces in the same series.
+- Query mem0 for `writer:voice`, `writer:pattern`, and prior pieces in the same series. Skim `MEMORY.md` for seed voice rules.
 - Identify the request mode: **draft** (working from a brief), **revision** (working from `critic` notes), or **solo** (a quick rewrite, a headline, a paragraph).
 
 ## 2. Confirm the brief
@@ -45,11 +45,13 @@ Show the outline to whoever invoked you before drafting if the piece is more tha
 
 ## 7. Record
 
-Update `MEMORY.md`:
+Write to mem0 with `writer:` tags:
 
-- New voice rules learned (a phrase a client liked, one they hated).
-- Pieces drafted, with date, title, and a link/anchor.
-- Reusable patterns (a structure that worked, a hook that landed).
+- `writer:voice` — a phrase a client liked, one they hated, with the context.
+- `writer:piece` — pieces drafted, date, title, link, `[[wikilink]]` to the brief.
+- `writer:pattern` — a structure or hook that worked. Pattern, not anecdote.
+
+Update `MEMORY.md` only for durable seed rules (banned-words list refresh, lasting client voice rules).
 
 ## 8. Exit
 

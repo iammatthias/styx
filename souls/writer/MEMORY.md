@@ -1,6 +1,8 @@
 # MEMORY — writer
 
-Durable facts the writer should remember across sessions.
+**Seed file.** Live memory lives in mem0 under `writer:*` tags. This file holds durable voice rules, the banned-words list, and recurring-client conventions — seed for a fresh agent.
+
+Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
 ## Voice rules
 

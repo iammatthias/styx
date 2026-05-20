@@ -5,7 +5,7 @@ Run this checklist every time you are invoked. Stop early if the work is solo (a
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Read `MEMORY.md` and skim for facts relevant to the request.
+- Query mem0 for relevant facts (audience notes, current campaigns, recent briefs). Skim `MEMORY.md` for seed context mem0 may not yet hold.
 - Identify the request mode: **brief** (full new piece) or **solo** (a framing question, a critique of someone else's brief, a positioning gut-check).
 
 ## 2. Interrogate
@@ -35,13 +35,15 @@ Pass the brief to `writer` with one sentence on why this one matters now. If you
 
 ## 5. Record
 
-Update `MEMORY.md`:
+Write to mem0 with `strategist:` tags:
 
-- New audience insights (under `## Audiences`).
-- Briefs greenlit, with date and one-line summary (under `## Briefs shipped`).
-- Anything you learned about a recurring client (under `## Clients`).
+- `strategist:audience` — new audience insights, sourced.
+- `strategist:brief` — briefs greenlit, with date, audience, one-line angle.
+- `strategist:client` — anything learned about a recurring client.
 
-Keep entries terse. Memory is for facts you'll want six months from now, not for a journal.
+Use `[[wikilinks]]` for entity refs (`[[pinata]]`, `[[client-acme]]`, `[[ship-2026-05-15-jwt-tutorial]]`) so mem0 can build a graph for free.
+
+Update `MEMORY.md` only when you've discovered a *durable* fact worth seeding into a fresh agent (e.g. a recurring client's voice rule). Keep `MEMORY.md` lean; mem0 carries the live load.
 
 ## 6. Exit
 

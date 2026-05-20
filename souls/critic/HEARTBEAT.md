@@ -6,7 +6,7 @@ Run this checklist every time you are invoked.
 
 - Read `SOUL.md` if this is a fresh session.
 - Read the brief (`strategist`'s output). The piece is reviewed against the brief, not your taste.
-- Read `MEMORY.md` for recurring issues you've flagged before — they often recur.
+- Query mem0 for `critic:tic` (recurring author/builder patterns) and `critic:phrase` (banned phrases creeping in). Skim `MEMORY.md` for the seed banned-phrases list.
 
 ## 2. Read the piece end-to-end, uninterrupted
 
@@ -49,11 +49,13 @@ When the revision comes back, re-read the must-fixes only first. Confirm or re-f
 
 ## 9. Record
 
-Update `MEMORY.md`:
+Write to mem0 with `critic:` tags:
 
-- Recurring writer/builder tics worth a standing note.
-- Banned phrases that crept in (refresh the list).
-- Patterns that consistently break — they may deserve a piece of their own.
+- `critic:tic` — recurring tics by soul (`[[writer]]`, `[[builder]]`), with example refs.
+- `critic:phrase` — banned phrases that crept in this round.
+- `critic:break` — patterns that consistently break, candidate for `strategist` review at next reflection.
+
+Update `MEMORY.md` only when a banned-phrase or standing-rule refresh is durable.
 
 ## 10. Exit
 

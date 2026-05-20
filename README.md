@@ -1,8 +1,8 @@
 # styx
 
-A library of agent souls. Drop one into [Hermes](https://github.com/NousResearch/hermes-agent), Claude Code, or any LLM that takes a system prompt. The agent inherits an identity, a wake-up routine, and a place to remember things.
+A library of agent souls and skills. Drop a soul into [Hermes](https://github.com/NousResearch/hermes-agent), Claude Code, or any LLM that takes a system prompt — the agent inherits an identity, a wake-up routine, and a place to remember things. Skills are reusable multi-step procedures any soul can invoke.
 
-The default soul handles whatever shows up. The crew sharpens for specific shapes of work: framing, words, code, exploration, review, shipping, reflection.
+The default soul handles whatever shows up. The crew sharpens for specific shapes of work: framing, words, code, exploration, review, shipping, reflection. Skills extend reach: real browser, scraping, cross-model review, codebase health, voice checks, monitors.
 
 ## Quickstart
 
@@ -11,13 +11,14 @@ Hermes, five commands, working in five minutes.
 ```bash
 git clone <styx-remote> ~/code/styx && cd ~/code/styx
 
-ln -s "$(pwd)/SOUL.md" ~/.hermes/SOUL.md           # base identity
-ln -s "$(pwd)/souls"   ~/.hermes/skills/styx       # crew as Hermes skills
+ln -s "$(pwd)/SOUL.md" ~/.hermes/SOUL.md                # base identity
+ln -s "$(pwd)/souls"   ~/.hermes/skills/styx-souls      # the crew
+ln -s "$(pwd)/skills"  ~/.hermes/skills/styx-skills     # the toolbox
 hermes bundles create styx strategist writer builder scout critic operator reflector
 # restart Hermes
 ```
 
-You now have `/strategist`, `/writer`, `/builder`, `/scout`, `/critic`, `/operator`, `/reflector`, and the base soul active by default.
+You now have the seven souls (`/strategist`, `/writer`, `/builder`, `/scout`, `/critic`, `/operator`, `/reflector`), ten skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`), and the base soul active by default.
 
 Not using Hermes? Skip the symlinks. Paste the soul's `SOUL.md` and `HEARTBEAT.md` into your runtime's system prompt and mount its folder writable so `MEMORY.md` updates persist. `souls/<name>/` is also a valid paperclip `$AGENT_HOME`.
 
@@ -51,7 +52,19 @@ styx/
 │   ├── critic/        # stress-test
 │   ├── operator/      # ship
 │   ├── reflector/     # reflect
-│   └── _template/     # scaffold for spawning new souls
+│   └── _template/
+├── skills/
+│   ├── browse/             # real Chromium
+│   ├── friction/           # walk a UX, report what hurts
+│   ├── scrape/             # structured data → JSON
+│   ├── skillify/           # one-off → reusable skill
+│   ├── codex/              # second opinion from the other model
+│   ├── document-release/   # sync docs after a ship
+│   ├── health/             # codebase quality snapshot
+│   ├── voice-check/        # banned phrases / AI-tells pass
+│   ├── pulse/              # what people are saying about X
+│   ├── watch/              # recurring monitor for X
+│   └── _template/
 ```
 
 Each soul folder is five files:
@@ -63,6 +76,12 @@ Each soul folder is five files:
 | `SKILL.md` | [agentskills.io](https://agentskills.io) frontmatter so Hermes can discover it via progressive disclosure |
 | `TOOLS.md` | What runs natively vs. delegates to Claude Code via `delegate_task` |
 | `MEMORY.md` | Seed file. Live memory lives in mem0. |
+
+## Souls vs. skills
+
+Souls are *who*. Skills are *how*.
+
+A soul is an identity — posture, voice, refusals. You wear it. A skill is a multi-step procedure. You run it. The `/writer` soul might run `/voice-check` before handing to `/critic`. The `/critic` might run `/codex` on high-stakes pieces. The `/scout` might run `/scrape` and then `/skillify` if the result was worth keeping. See [`skills/README.md`](./skills) for the full skill list.
 
 ## Invoking a soul
 

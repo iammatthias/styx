@@ -16,6 +16,10 @@ Multi-step procedures any soul can invoke. Following [agentskills.io](https://ag
 | [`/voice-check`](./voice-check) | Fast banned-phrases / AI-tells pass on a draft. |
 | [`/pulse`](./pulse) | What are people saying about X right now? |
 | [`/watch`](./watch) | Recurring monitor for X across surfaces. |
+| [`/taste`](./taste) | Fast pass over a UI for AI design tells. The `/voice-check` of design. |
+| [`/refactor-ui`](./refactor-ui) | Improve an interface with fundamentals — hierarchy first, then the rest. |
+| [`/design-review`](./design-review) | Scored design audit, 0-10 per dimension. The `/health` of UI. |
+| [`/layers`](./layers) | Find which layer is actually broken before you polish the surface. |
 
 ## Souls vs. skills
 
@@ -23,11 +27,18 @@ Souls are *who*. Skills are *how*.
 
 A soul is an identity with posture, voice, and refusals. You wear it. A skill is a multi-step procedure. You run it.
 
-The `/writer` soul might run `/voice-check` before handing to `/critic`. The `/critic` might run `/codex` on high-stakes pieces. The `/scout` might run `/scrape` and then `/skillify` if the scrape was worth keeping. Souls compose; skills compose; they cross-compose.
+The `/writer` soul might run `/voice-check` before handing to `/critic`. The `/critic` might run `/codex` on high-stakes pieces. The `/scout` might run `/scrape` and then `/skillify` if the scrape was worth keeping. The `/designer` soul owns the design skills the way `/writer` owns `/voice-check`: `/taste` before adding, `/refactor-ui` to do the work, `/design-review` to score it, `/layers` when the surface isn't the real problem. Souls compose; skills compose; they cross-compose.
 
 ## Lineage
 
 Most of these are distilled from [gstack](https://github.com/garrytan/gstack)'s 40+ skills. The net-new ones (`/voice-check`, `/pulse`, `/watch`) emerged from gaps the existing crew kept hitting.
+
+The design skills (`/taste`, `/refactor-ui`, `/design-review`, `/layers`) are distilled the same way, from four upstream design skills:
+
+- **Anti-slop tells, the seven design domains** — [impeccable](https://github.com/pbakaus/impeccable)
+- **Variance / density / motion dials, the style variants** — [taste-skill](https://github.com/Leonxlnx/taste-skill)
+- **Hierarchy-first fundamentals, the corrective moves** — [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin)
+- **The seven layers, problem-space-before-solution-space** — [layers-skills](https://github.com/jamiemill/layers-skills)
 
 ## Adding a skill
 

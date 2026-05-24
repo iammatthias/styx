@@ -9,6 +9,7 @@ Most invocations are one soul, full stop. You ask the agent something; it picks 
 - "Help me think through whether to take this meeting" → `/strategist`
 - "Rewrite this paragraph so it stops sounding like a press release" → `/writer`
 - "Fix this script that's throwing on empty input" → `/builder`
+- "Make this dashboard stop looking like every other AI-generated SaaS app" → `/designer`
 - "What are people using instead of Postgres for embedded vector search in 2026?" → `/scout`
 - "Tear apart this PR description" → `/critic`
 - "Schedule this thread and post it Tuesday morning" → `/operator`
@@ -23,9 +24,9 @@ For net-new work where the stakes justify the orchestration tax, the crew compos
 ```
    ┌──► scout ───┐
    │             ▼
-strategist  ──►  writer / builder  ──►  critic  ──►  operator
-   ▲                                                    │
-   └────────────────────────────────────────────────────┘
+strategist  ──►  writer / builder / designer  ──►  critic  ──►  operator
+   ▲                                                              │
+   └──────────────────────────────────────────────────────────────┘
                   (feedback: what landed, what didn't)
 
                        reflector
@@ -33,7 +34,7 @@ strategist  ──►  writer / builder  ──►  critic  ──►  operator
 ```
 
 - **Scout** sits before *or* in parallel with strategist when the territory is unknown — frame what you don't have to first.
-- **Writer and builder** are the two making-shapes; they run in parallel when a piece needs both prose and code.
+- **Writer, builder, and designer** are the making-shapes; they run in parallel when a piece needs prose, code, and a look. Designer runs `/layers` first if the surface isn't the real problem, which can bounce back to strategist.
 - **Critic** comes before any external ship; the bar is higher the more irreversible the action.
 - **Operator** ships, then reports back.
 - **Reflector** sits outside the loop, on a cadence.
@@ -51,7 +52,10 @@ A handoff is the only place where work changes hands. Everything else is solo wo
 | `/scout` → `/strategist` | field-notes report | Found / Pattern / Hunch / Open — labeled, sourced |
 | `/writer` → `/builder` | draft with `// builder: …` markers | Code requirements explicit, no hand-waving |
 | `/builder` → `/writer` | working snippets + repo link | Runs from a clean state |
-| `/writer` or `/builder` → `/critic` | finished artifact | Self-edit pass done, claims sourced |
+| `/strategist` → `/designer` | brief | Beneficiary, "done" condition, the surface to design |
+| `/designer` → `/builder` | spec + tokens + changelog | Design settled, variant + dials stated |
+| `/builder` → `/designer` | working but unstyled UI | Runs; ready for the look-and-feel pass |
+| `/writer`, `/builder`, or `/designer` → `/critic` | finished artifact | Self-edit / `/design-review` done, claims sourced |
 | `/critic` → `/writer` or `/builder` | review notes | Specific, line-anchored, actionable |
 | `/critic` → `/operator` | approved artifact | Critic signed off, not just acquiesced |
 | `/operator` → `/strategist` | ship report | What posted, what landed, what didn't |

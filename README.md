@@ -2,7 +2,7 @@
 
 A library of agent souls and skills. Drop a soul into [Hermes](https://github.com/NousResearch/hermes-agent), Claude Code, or any LLM that takes a system prompt — the agent inherits an identity, a wake-up routine, and a place to remember things. Skills are reusable multi-step procedures any soul can invoke.
 
-The default soul handles whatever shows up. The crew sharpens for specific shapes of work: framing, words, code, exploration, review, shipping, reflection. Skills extend reach: real browser, scraping, cross-model review, codebase health, voice checks, monitors.
+The default soul handles whatever shows up. The crew sharpens for specific shapes of work: framing, words, code, design, exploration, review, shipping, reflection. Skills extend reach: real browser, scraping, cross-model review, codebase health, voice checks, design audits, monitors.
 
 ## Quickstart
 
@@ -14,23 +14,24 @@ git clone <styx-remote> ~/code/styx && cd ~/code/styx
 ln -s "$(pwd)/SOUL.md" ~/.hermes/SOUL.md                # base identity
 ln -s "$(pwd)/souls"   ~/.hermes/skills/styx-souls      # the crew
 ln -s "$(pwd)/skills"  ~/.hermes/skills/styx-skills     # the toolbox
-hermes bundles create styx strategist writer builder scout critic operator reflector
+hermes bundles create styx strategist writer builder designer scout critic operator reflector
 # restart Hermes
 ```
 
-You now have the seven souls (`/strategist`, `/writer`, `/builder`, `/scout`, `/critic`, `/operator`, `/reflector`), ten skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`), and the base soul active by default.
+You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), fourteen skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`), and the base soul active by default.
 
 Not using Hermes? Skip the symlinks. Paste the soul's `SOUL.md` and `HEARTBEAT.md` into your runtime's system prompt and mount its folder writable so `MEMORY.md` updates persist. `souls/<name>/` is also a valid paperclip `$AGENT_HOME`.
 
 ## The crew
 
-Seven souls. Pick the one whose shape matches the work.
+Eight souls. Pick the one whose shape matches the work.
 
 | Soul | Invoke when |
 |---|---|
 | [`/strategist`](./souls/strategist) | Framing new work. Worth doing, for whom, what's "done"? |
 | [`/writer`](./souls/writer) | Anything text-shaped. Prose, messages, notes, docs, creative writing. |
 | [`/builder`](./souls/builder) | Making things that run. Code, scripts, demos, debugging. |
+| [`/designer`](./souls/designer) | How it looks and feels. Visual hierarchy, type, color, spacing, restraint. |
 | [`/scout`](./souls/scout) | Curiosity-driven exploration. Go look, return field notes. |
 | [`/critic`](./souls/critic) | Stress-testing before ship. Drafts, code, claims, decisions. |
 | [`/operator`](./souls/operator) | Getting work out the door. Publish, send, schedule, hand off. |
@@ -48,6 +49,7 @@ styx/
 │   ├── strategist/    # frame
 │   ├── writer/        # words
 │   ├── builder/       # make
+│   ├── designer/      # look + feel
 │   ├── scout/         # explore
 │   ├── critic/        # stress-test
 │   ├── operator/      # ship
@@ -64,6 +66,10 @@ styx/
 │   ├── voice-check/        # banned phrases / AI-tells pass
 │   ├── pulse/              # what people are saying about X
 │   ├── watch/              # recurring monitor for X
+│   ├── taste/              # AI design tells pass
+│   ├── refactor-ui/        # apply design fundamentals
+│   ├── design-review/      # scored UI audit
+│   ├── layers/             # find the broken layer
 │   └── _template/
 ```
 
@@ -81,7 +87,7 @@ Each soul folder is five files:
 
 Souls are *who*. Skills are *how*.
 
-A soul is an identity — posture, voice, refusals. You wear it. A skill is a multi-step procedure. You run it. The `/writer` soul might run `/voice-check` before handing to `/critic`. The `/critic` might run `/codex` on high-stakes pieces. The `/scout` might run `/scrape` and then `/skillify` if the result was worth keeping. See [`skills/README.md`](./skills) for the full skill list.
+A soul is an identity — posture, voice, refusals. You wear it. A skill is a multi-step procedure. You run it. The `/writer` soul might run `/voice-check` before handing to `/critic`. The `/designer` soul runs `/taste` before adding to a design and `/design-review` before shipping it. The `/critic` might run `/codex` on high-stakes pieces. The `/scout` might run `/scrape` and then `/skillify` if the result was worth keeping. See [`skills/README.md`](./skills) for the full skill list.
 
 ## Invoking a soul
 
@@ -135,5 +141,6 @@ styx is a distillation, not an invention:
 - **Forcing questions, investigate mode, safety primitives, the sprint loop** — [gstack](https://github.com/garrytan/gstack)
 - **Markdown memory in git, wikilink edges** — [gbrain](https://github.com/garrytan/gbrain)
 - **Skill discovery, mem0 layering, `delegate_task`, `/personality` overlays** — [Hermes](https://github.com/NousResearch/hermes-agent)
+- **The `/designer` soul and its skills** — distilled from [impeccable](https://github.com/pbakaus/impeccable) (anti-slop tells, the design domains), [taste-skill](https://github.com/Leonxlnx/taste-skill) (variance/density/motion dials, style variants), [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin) (hierarchy-first fundamentals), and [layers-skills](https://github.com/jamiemill/layers-skills) (the seven layers of product design)
 
 The synthesis is what's here. Each upstream does much more. Read them.

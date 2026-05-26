@@ -89,15 +89,16 @@ copy_soul() {
   cp -f "$SCRIPT_DIR/SOUL.md" "$HERMES_HOME/SOUL.md"
 }
 
-soul_bundles() {
-  # "styx" base bundle + one bundle per soul (skip the template).
+bundle_args() {
+  # Build the "styx" bundle from one --skill per soul (skip the template).
+  # This Hermes wants: bundles create <name> --skill A --skill B ... --force
   printf "styx"
   for d in "$SCRIPT_DIR"/souls/*/; do
     name="$(basename "$d")"
     [ "$name" = "_template" ] && continue
-    printf " %s" "$name"
+    printf " --skill %s" "$name"
   done
-  printf "\n"
+  printf " --force\n"
 }
 
 # =============================================================================
@@ -142,11 +143,11 @@ do_install() {
     step "building bundles"
     if command -v hermes >/dev/null 2>&1; then
       # shellcheck disable=SC2046
-      hermes bundles create $(soul_bundles)
-      ok "bundles created"
+      hermes bundles create $(bundle_args)
+      ok "bundle created"
     else
       warn "hermes not on PATH — skipping. Run this when it is:"
-      echo "    hermes bundles create $(soul_bundles)"
+      echo "    hermes bundles create $(bundle_args)"
     fi
   fi
 

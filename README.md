@@ -18,7 +18,7 @@ hermes bundles create styx strategist writer builder designer scout critic opera
 # restart Hermes
 ```
 
-You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-one skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`), and the base soul active by default.
+You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-three skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/handoff`), and the base soul active by default.
 
 Not using Hermes? Skip the symlinks. Paste the soul's `SOUL.md` and `HEARTBEAT.md` into your runtime's system prompt and mount its folder writable so `MEMORY.md` updates persist. `souls/<name>/` is also a valid paperclip `$AGENT_HOME`.
 
@@ -77,6 +77,8 @@ styx/
 │   ├── to-markdown/        # any file/URL → markdown
 │   ├── triage/             # prioritize an issue/PR queue
 │   ├── image-gen/          # generate/edit images via API
+│   ├── wrangler/           # deploy Cloudflare Workers
+│   ├── handoff/            # pack work across a boundary
 │   └── _template/
 ```
 
@@ -149,6 +151,7 @@ styx is a distillation, not an invention:
 - **Markdown memory in git, wikilink edges** — [gbrain](https://github.com/garrytan/gbrain)
 - **Skill discovery, mem0 layering, `delegate_task`, `/personality` overlays** — [Hermes](https://github.com/NousResearch/hermes-agent)
 - **The `/designer` soul and its skills** — distilled from [impeccable](https://github.com/pbakaus/impeccable) (anti-slop tells, the design domains), [taste-skill](https://github.com/Leonxlnx/taste-skill) (variance/density/motion dials, style variants), [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin) (hierarchy-first fundamentals), and [layers-skills](https://github.com/jamiemill/layers-skills) (the seven layers of product design)
-- **`/skill-cleaner`, `/pr-review`, `/triage`, `/cli-design`, `/to-markdown`, `/domains`, `/image-gen`** — lifted from [agent-scripts](https://github.com/steipete/agent-scripts) (skill-cleaner, github-deep-review, github-project-triage, create-cli, markdown-converter, cloudflare-registrar + domain-dns-ops, nano-banana-pro + openai-image-gen), de-Codex'd, de-personalized, and made runtime-agnostic
+- **`/skill-cleaner`, `/pr-review`, `/triage`, `/cli-design`, `/to-markdown`, `/domains`, `/wrangler`, `/image-gen`** — lifted from [agent-scripts](https://github.com/steipete/agent-scripts) (skill-cleaner, github-deep-review, github-project-triage, create-cli, markdown-converter, cloudflare-registrar + domain-dns-ops, wrangler, nano-banana-pro + openai-image-gen), de-Codex'd, de-personalized, and made runtime-agnostic
+- **`/handoff`** — formalizes the base soul's context-save mode into a skill, in the spirit of agent-scripts' handoff
 
 The synthesis is what's here. Each upstream does much more. Read them.

@@ -27,6 +27,8 @@ Multi-step procedures any soul can invoke. Following [agentskills.io](https://ag
 | [`/to-markdown`](./to-markdown) | Convert any file or URL to clean markdown. |
 | [`/triage`](./triage) | Prioritize an issue/PR queue into maintainer action cards. |
 | [`/image-gen`](./image-gen) | Generate or edit images via an image API. |
+| [`/wrangler`](./wrangler) | Deploy Cloudflare Workers, tail logs, manage KV/R2/D1. |
+| [`/handoff`](./handoff) | Pack work to hand across a session, soul, agent, or person. |
 
 ## Souls vs. skills
 
@@ -55,7 +57,10 @@ Seven skills are lifted from [agent-scripts](https://github.com/steipete/agent-s
 - **`/cli-design`** ← create-cli (CLI UX spec, [clig.dev](https://clig.dev) rubric)
 - **`/to-markdown`** ← markdown-converter + video-transcript-downloader (markitdown + yt-dlp)
 - **`/domains`** ← cloudflare-registrar + domain-dns-ops (registrar + DNS golden path)
+- **`/wrangler`** ← wrangler (Workers deploy/tail, KV/R2/D1, account guardrails)
 - **`/image-gen`** ← nano-banana-pro + openai-image-gen (draft→iterate→final, prompt templates)
+
+`/handoff` is a Styx original — it promotes the base soul's context-save mode (in [`SOUL.md`](../SOUL.md)) into a first-class skill, in the spirit of agent-scripts' handoff.
 
 ## Adding a skill
 

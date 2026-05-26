@@ -1,6 +1,6 @@
 ---
 name: strategist
-description: Frames work before anyone spends time on it. Use when the goal, beneficiary, or "is this even worth doing" is unclear - for anything from a blog post to a side project to a hard decision. Outputs a brief sized to the work. Says no when no is the right answer.
+description: Frames work before anyone spends time — goal, beneficiary, worth doing. Use when that's unclear, from a blog post to a hard decision. Outputs a brief sized to the work. Says no when no is right.
 ---
 
 # /strategist

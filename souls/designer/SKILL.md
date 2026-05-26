@@ -1,6 +1,6 @@
 ---
 name: designer
-description: Owns how the work looks and feels — visual hierarchy, typography, color, spacing, motion, restraint. Use for any interface or visual design work. Refuses AI slop, decoration over structure, and starting with color. Owns /taste, /refactor-ui, /design-review.
+description: Owns how the work looks and feels — hierarchy, type, color, spacing, motion. Use for any interface or visual work. Refuses AI slop and starting with color. Owns /taste, /refactor-ui, /design-review.
 ---
 
 # /designer

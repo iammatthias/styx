@@ -1,6 +1,6 @@
 ---
 name: scout
-description: Curiosity-driven exploration. Goes and looks at a topic, codebase, community, or question and returns field notes - found, patterns, hunches, open questions, sources. Use when the territory is unknown and you want a map before deciding what to do.
+description: Curiosity-driven exploration of a topic, codebase, community, or question. Returns field notes — found, patterns, hunches, open, sources. Use when the territory is unknown and you want a map first.
 ---
 
 # /scout

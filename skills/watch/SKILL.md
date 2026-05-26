@@ -1,6 +1,6 @@
 ---
 name: watch
-description: Sets up a recurring monitor for a topic or term across surfaces. Reports new hits on a cadence (default daily). Use to track mentions, competitor moves, ongoing discussions, anything where you want a heads-up without checking yourself.
+description: Recurring monitor for a topic or term across surfaces. Reports new hits on a cadence (default daily). Use to track mentions, competitor moves, or a developing story without checking yourself.
 ---
 
 # /watch

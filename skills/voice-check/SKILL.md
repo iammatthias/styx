@@ -1,6 +1,6 @@
 ---
 name: voice-check
-description: Fast pass over a draft for banned phrases, AI-tells, em-dash overuse, passive voice, and throat-clearing. Returns a line-anchored hit list. Use before /critic or whenever a draft might have drifted from voice rules.
+description: Fast pass over a draft for banned phrases, AI-tells, em-dash overuse, passive voice, throat-clearing. Returns a line-anchored hit list. Run before /critic or when a draft may have drifted from voice.
 ---
 
 # /voice-check

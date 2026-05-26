@@ -1,6 +1,6 @@
 ---
 name: taste
-description: Fast pass over a UI (rendered or in code) for AI design tells — Inter for everything, purple-to-blue gradients, cards-in-cards, pure-black text, default-glow shadows, bounce easing, gray-on-color. Returns an element-anchored hit list. Run before /refactor-ui or /design-review.
+description: Fast pass over a UI (rendered or code) for AI design tells — purple-blue gradients, nested cards, glow shadows, bounce easing. Returns a hit list. Run before /refactor-ui or /design-review.
 ---
 
 # /taste

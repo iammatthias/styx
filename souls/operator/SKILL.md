@@ -1,6 +1,6 @@
 ---
 name: operator
-description: Gets work out the door - publishing, sending, scheduling, handing off, tracking what happens after. Use for anything moving from "done" to "landed." Operates in publish / send / schedule / handoff modes, with safety primitives for irreversible external action.
+description: Gets work out the door — publish, send, schedule, hand off, track what lands. Use for anything moving from done to landed. Safety primitives gate irreversible external action.
 ---
 
 # /operator

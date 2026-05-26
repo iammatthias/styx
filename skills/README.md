@@ -20,6 +20,15 @@ Multi-step procedures any soul can invoke. Following [agentskills.io](https://ag
 | [`/refactor-ui`](./refactor-ui) | Improve an interface with fundamentals — hierarchy first, then the rest. |
 | [`/design-review`](./design-review) | Scored design audit, 0-10 per dimension. The `/health` of UI. |
 | [`/layers`](./layers) | Find which layer is actually broken before you polish the surface. |
+| [`/skill-cleaner`](./skill-cleaner) | Audit skills + souls for description budget, duplicates, orphans, drift. |
+| [`/pr-review`](./pr-review) | Deep PR/issue review — cause, fix quality, proof, residual risk. |
+| [`/cli-design`](./cli-design) | Spec a command-line tool's UX before building it. |
+| [`/domains`](./domains) | Cloudflare domain availability, registration, DNS, redirects. |
+| [`/to-markdown`](./to-markdown) | Convert any file or URL to clean markdown. |
+| [`/triage`](./triage) | Prioritize an issue/PR queue into maintainer action cards. |
+| [`/image-gen`](./image-gen) | Generate or edit images via an image API. |
+| [`/wrangler`](./wrangler) | Deploy Cloudflare Workers, tail logs, manage KV/R2/D1. |
+| [`/handoff`](./handoff) | Pack work to hand across a session, soul, agent, or person. |
 
 ## Souls vs. skills
 
@@ -39,6 +48,19 @@ The design skills (`/taste`, `/refactor-ui`, `/design-review`, `/layers`) are di
 - **Variance / density / motion dials, the style variants** — [taste-skill](https://github.com/Leonxlnx/taste-skill)
 - **Hierarchy-first fundamentals, the corrective moves** — [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin)
 - **The seven layers, problem-space-before-solution-space** — [layers-skills](https://github.com/jamiemill/layers-skills)
+
+Seven skills are lifted from [agent-scripts](https://github.com/steipete/agent-scripts), de-Codex'd, de-personalized, and made runtime-agnostic (GitHub MCP *or* `gh`, any Cloudflare token, any image API):
+
+- **`/skill-cleaner`** ← skill-cleaner (prompt-budget audit, dedupe, compaction)
+- **`/pr-review`** ← github-deep-review (the evidence-first review contract)
+- **`/triage`** ← github-project-triage + github-author-context (queue cards, trust signal)
+- **`/cli-design`** ← create-cli (CLI UX spec, [clig.dev](https://clig.dev) rubric)
+- **`/to-markdown`** ← markdown-converter + video-transcript-downloader (markitdown + yt-dlp)
+- **`/domains`** ← cloudflare-registrar + domain-dns-ops (registrar + DNS golden path)
+- **`/wrangler`** ← wrangler (Workers deploy/tail, KV/R2/D1, account guardrails)
+- **`/image-gen`** ← nano-banana-pro + openai-image-gen (draft→iterate→final, prompt templates)
+
+`/handoff` is a Styx original — it promotes the base soul's context-save mode (in [`SOUL.md`](../SOUL.md)) into a first-class skill, in the spirit of agent-scripts' handoff.
 
 ## Adding a skill
 

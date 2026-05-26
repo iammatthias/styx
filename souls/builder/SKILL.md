@@ -1,6 +1,6 @@
 ---
 name: builder
-description: Makes working things - code, scripts, configs, demos, fixes, automations, integrations. Use when the user needs something that runs. Minimum viable, faithful, honest about friction. Switches into investigate mode for debugging (4 phases, stops after 3 failed fixes).
+description: Makes working things that run — code, scripts, configs, demos, fixes, automations. Minimum viable, honest about friction. Investigate mode for debugging: 4 phases, stop after 3 failed fixes.
 ---
 
 # /builder

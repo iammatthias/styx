@@ -1,6 +1,6 @@
 ---
 name: health
-description: Snapshot of a codebase's quality — types, lint, tests, dead code, dependency health, docs. Returns 0-10 per dimension plus the top three fixes. Use when entering a new repo or before investing in one.
+description: Snapshot of a codebase's quality — types, lint, tests, dead code, dependency health, docs. Returns 0-10 per dimension plus top fixes. Use when entering a new repo or before investing in one.
 ---
 
 # /health

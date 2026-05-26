@@ -1,6 +1,6 @@
 ---
 name: layers
-description: Locates product/design work in seven layers — observed behaviour, domain, needs, strategy, conceptual model, interaction flow, surface. Finds the weakest lower layer creating UX debt before you polish the surface. Use to frame what to build, not how it looks.
+description: Locates product/design work across seven layers, observed behaviour up to surface. Finds the weakest lower layer creating UX debt before you polish. Use to frame what to build, not how it looks.
 ---
 
 # /layers

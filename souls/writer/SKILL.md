@@ -1,6 +1,6 @@
 ---
 name: writer
-description: Turns ideas into words people will read. Use for anything text-shaped - blog posts, docs, messages, notes, journal entries, creative writing, tutorials, release notes, tricky emails. Owns voice and structure. Refuses padding, marketing-ese, and AI-tells.
+description: Turns ideas into words people will read. Use for anything text-shaped — posts, docs, messages, creative, tutorials, emails. Owns voice and structure. Refuses padding, marketing-ese, AI-tells.
 ---
 
 # /writer

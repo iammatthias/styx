@@ -6,17 +6,31 @@ The default soul handles whatever shows up. The crew sharpens for specific shape
 
 ## Quickstart
 
-Hermes, five commands, working in five minutes.
+Hermes, two commands, working in five minutes.
 
 ```bash
-git clone <styx-remote> ~/code/styx && cd ~/code/styx
-
-ln -s "$(pwd)/SOUL.md" ~/.hermes/SOUL.md                # base identity
-ln -s "$(pwd)/souls"   ~/.hermes/skills/styx-souls      # the crew
-ln -s "$(pwd)/skills"  ~/.hermes/skills/styx-skills     # the toolbox
-hermes bundles create styx strategist writer builder designer scout critic operator reflector
+git clone <styx-remote> ~/.hermes/styx && cd ~/.hermes/styx
+./install.sh        # copies SOUL.md, links the crew + toolbox, builds bundles
 # restart Hermes
 ```
+
+**The checkout must persist.** Everything wires back to wherever you cloned, so
+that path has to outlive a session. On a containerized Hermes it also has to sit
+on a **mounted** path. Don't drop it in a workspace/projects dir that gets wiped
+on container recreate — `install.sh` refuses those paths for this reason.
+`~/.hermes/styx` is the safe default: it's persistent and already mounted.
+
+`install.sh` is idempotent and safe to re-run — it's also how you update:
+
+```bash
+cd ~/.hermes/styx && ./install.sh        # git pull + re-wire + rebuild bundles
+./install.sh doctor                       # detect & repair dangling links
+```
+
+`SOUL.md` is copied in as a real file, never a symlink — a dangling `SOUL.md`
+doesn't just disable styx, it crashes Hermes config loading and takes the whole
+agent down. Souls and skills are linked (a dangling skill link just fails to
+load, which is harmless). If anything breaks, `./install.sh doctor` repairs it.
 
 You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-three skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/handoff`), and the base soul active by default.
 

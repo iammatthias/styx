@@ -1,6 +1,6 @@
 ---
 name: design-review
-description: Scored design audit of a UI — hierarchy, typography, color, spacing, motion, interaction, responsive, copy. Returns 0-10 per dimension plus the top three fixes and a verdict. The /health analog for interfaces; deeper than /taste's mechanical pass.
+description: Scored design audit of a UI — hierarchy, type, color, spacing, motion, interaction, responsive, copy. Returns 0-10 per dimension plus top fixes and a verdict. The /health analog for interfaces.
 ---
 
 # /design-review

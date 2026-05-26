@@ -1,6 +1,6 @@
 ---
 name: refactor-ui
-description: Improves an existing interface with design fundamentals — hierarchy first, type scale, tinted color, spacing system, functional shadows, proximity grouping, real states. Tunable via variance/density/motion dials and one style variant. Fixes what /taste and /design-review flag.
+description: Improves an interface with fundamentals, hierarchy first — type, color, spacing, shadows, states. Tunable via variance/density/motion dials. Fixes what /taste and /design-review flag.
 ---
 
 # /refactor-ui

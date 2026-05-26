@@ -1,6 +1,6 @@
 ---
 name: pulse
-description: Surveys what people are saying about a topic right now across multiple surfaces. Returns the current state of discussion - dominant takes, dissents, surprises, recency. Use for a quick read on the room before forming an opinion.
+description: Surveys what people are saying about a topic right now, across several surfaces. Returns dominant takes, dissents, surprises, recency. Use for a quick read on the room before forming an opinion.
 ---
 
 # /pulse

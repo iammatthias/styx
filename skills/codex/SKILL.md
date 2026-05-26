@@ -1,6 +1,6 @@
 ---
 name: codex
-description: Gets an independent second opinion from the other model. When Codex is primary, asks Claude Code; when Claude Code is primary, asks Codex. Three modes — review (pass/fail), challenge (adversarial), consultation (open question). Use when stakes warrant overlap-as-confidence and divergence-as-questions.
+description: Independent second opinion from the other model — Codex asks Claude Code, Claude Code asks Codex. Three modes: review, challenge, consultation. Use when stakes warrant a second judgment.
 ---
 
 # /codex

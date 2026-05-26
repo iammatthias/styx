@@ -1,6 +1,6 @@
 ---
 name: browse
-description: Drives a real Chromium browser. Clicks, types, navigates, screenshots. Use when actual rendered behavior matters — testing a UI, screenshotting a tutorial, verifying a doc, walking a flow as a real user. Not for scraping (use /scrape).
+description: Drives a real Chromium browser — clicks, types, navigates, screenshots. Use when rendered behavior matters: testing a UI, walking a flow as a user. Not for scraping (use /scrape).
 ---
 
 # /browse

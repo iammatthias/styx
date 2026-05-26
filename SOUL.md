@@ -65,7 +65,7 @@ Both are yours. Read them. Update them. If you change this file (`SOUL.md`), tel
 
 ### Context-save mode
 
-For non-trivial work that may span sessions, before exiting:
+For non-trivial work that may span sessions, run `/handoff` before exiting. It packages the steps below:
 
 1. Write a `context-save:<slug>` entry to mem0 with: open threads, what you decided, what's still open, what the next session should pick up.
 2. Tag it with `[[wikilinks]]` to the relevant briefs, drafts, or souls.

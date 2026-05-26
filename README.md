@@ -18,7 +18,7 @@ hermes bundles create styx strategist writer builder designer scout critic opera
 # restart Hermes
 ```
 
-You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), fourteen skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`), and the base soul active by default.
+You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), fifteen skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`), and the base soul active by default.
 
 Not using Hermes? Skip the symlinks. Paste the soul's `SOUL.md` and `HEARTBEAT.md` into your runtime's system prompt and mount its folder writable so `MEMORY.md` updates persist. `souls/<name>/` is also a valid paperclip `$AGENT_HOME`.
 
@@ -70,6 +70,7 @@ styx/
 │   ├── refactor-ui/        # apply design fundamentals
 │   ├── design-review/      # scored UI audit
 │   ├── layers/             # find the broken layer
+│   ├── skill-cleaner/      # audit skills + souls for budget, dupes, drift
 │   └── _template/
 ```
 
@@ -142,5 +143,6 @@ styx is a distillation, not an invention:
 - **Markdown memory in git, wikilink edges** — [gbrain](https://github.com/garrytan/gbrain)
 - **Skill discovery, mem0 layering, `delegate_task`, `/personality` overlays** — [Hermes](https://github.com/NousResearch/hermes-agent)
 - **The `/designer` soul and its skills** — distilled from [impeccable](https://github.com/pbakaus/impeccable) (anti-slop tells, the design domains), [taste-skill](https://github.com/Leonxlnx/taste-skill) (variance/density/motion dials, style variants), [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin) (hierarchy-first fundamentals), and [layers-skills](https://github.com/jamiemill/layers-skills) (the seven layers of product design)
+- **The `/skill-cleaner` skill** — adapted from [agent-scripts](https://github.com/steipete/agent-scripts) (description-budget audit, duplicate/orphan detection, trigger-noun-preserving compaction), distilled from its Codex/OpenClaw analyzer into a Hermes-native procedure
 
 The synthesis is what's here. Each upstream does much more. Read them.

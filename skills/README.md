@@ -20,6 +20,7 @@ Multi-step procedures any soul can invoke. Following [agentskills.io](https://ag
 | [`/refactor-ui`](./refactor-ui) | Improve an interface with fundamentals — hierarchy first, then the rest. |
 | [`/design-review`](./design-review) | Scored design audit, 0-10 per dimension. The `/health` of UI. |
 | [`/layers`](./layers) | Find which layer is actually broken before you polish the surface. |
+| [`/skill-cleaner`](./skill-cleaner) | Audit skills + souls for description budget, duplicates, orphans, drift. |
 
 ## Souls vs. skills
 
@@ -39,6 +40,8 @@ The design skills (`/taste`, `/refactor-ui`, `/design-review`, `/layers`) are di
 - **Variance / density / motion dials, the style variants** — [taste-skill](https://github.com/Leonxlnx/taste-skill)
 - **Hierarchy-first fundamentals, the corrective moves** — [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin)
 - **The seven layers, problem-space-before-solution-space** — [layers-skills](https://github.com/jamiemill/layers-skills)
+
+`/skill-cleaner` is adapted from [agent-scripts](https://github.com/steipete/agent-scripts) — its Codex/OpenClaw analyzer (prompt-budget math, duplicate/unused detection, description compaction) distilled into a Hermes-native procedure that audits this library's own skills and souls.
 
 ## Adding a skill
 

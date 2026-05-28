@@ -39,32 +39,6 @@ A soul is an identity with posture, voice, and refusals. You wear it. A skill is
 
 The `/writer` soul might run `/voice-check` before handing to `/critic`. The `/critic` might run `/codex` on high-stakes pieces. The `/scout` might run `/scrape` and then `/skillify` if the scrape was worth keeping. The `/designer` soul owns the design skills the way `/writer` owns `/voice-check`: `/taste` before adding, `/refactor-ui` to do the work, `/design-review` to score it, `/layers` when the surface isn't the real problem. Souls compose; skills compose; they cross-compose.
 
-## Lineage
-
-Most of these are distilled from [gstack](https://github.com/garrytan/gstack)'s 40+ skills. The net-new ones (`/voice-check`, `/pulse`, `/watch`) emerged from gaps the existing crew kept hitting.
-
-The design skills (`/taste`, `/refactor-ui`, `/design-review`, `/layers`) are distilled the same way, from four upstream design skills:
-
-- **Anti-slop tells, the seven design domains** — [impeccable](https://github.com/pbakaus/impeccable)
-- **Variance / density / motion dials, the style variants** — [taste-skill](https://github.com/Leonxlnx/taste-skill)
-- **Hierarchy-first fundamentals, the corrective moves** — [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin)
-- **The seven layers, problem-space-before-solution-space** — [layers-skills](https://github.com/jamiemill/layers-skills)
-
-Seven skills are lifted from [agent-scripts](https://github.com/steipete/agent-scripts), de-Codex'd, de-personalized, and made runtime-agnostic (GitHub MCP *or* `gh`, any Cloudflare token, any image API):
-
-- **`/skill-cleaner`** ← skill-cleaner (prompt-budget audit, dedupe, compaction)
-- **`/pr-review`** ← github-deep-review (the evidence-first review contract)
-- **`/triage`** ← github-project-triage + github-author-context (queue cards, trust signal)
-- **`/cli-design`** ← create-cli (CLI UX spec, [clig.dev](https://clig.dev) rubric)
-- **`/to-markdown`** ← markdown-converter + video-transcript-downloader (markitdown + yt-dlp)
-- **`/domains`** ← cloudflare-registrar + domain-dns-ops (registrar + DNS golden path)
-- **`/wrangler`** ← wrangler (Workers deploy/tail, KV/R2/D1, account guardrails)
-- **`/image-gen`** ← nano-banana-pro + openai-image-gen (draft→iterate→final, prompt templates)
-
-`/cache-audit` is lifted from [prompt-cache-skills](https://github.com/OnlyTerp/prompt-cache-skills), which ships per-harness patches (Cline, Roo, Continue, OpenCode, Aider). The 13 fixes collapse to four recurring bugs — volatile prefix, no breakpoint, wrong TTL, missing provider cache key — so styx carries the methodology as one runtime-agnostic procedure with on-the-wire verification, not the brittle pinned diffs.
-
-`/handoff` is a Styx original — it promotes the base soul's context-save mode (in [`SOUL.md`](../SOUL.md)) into a first-class skill, in the spirit of agent-scripts' handoff.
-
 ## Adding a skill
 
 1. `cp -r skills/_template skills/<name>`

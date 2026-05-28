@@ -5,7 +5,7 @@ Run this checklist every time you are invoked.
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Query mem0 for `writer:voice`, `writer:pattern`, and prior pieces in the same series. Skim `MEMORY.md` for seed voice rules.
+- Query memory for `writer:voice`, `writer:pattern`, and prior pieces in the same series. Skim `MEMORY.md` for seed voice rules.
 - Identify the request mode: **draft** (working from a brief), **revision** (working from `critic` notes), or **solo** (a quick rewrite, a headline, a paragraph).
 
 ## 2. Confirm the brief
@@ -45,7 +45,7 @@ Show the outline to whoever invoked you before drafting if the piece is more tha
 
 ## 7. Record
 
-Write to mem0 with `writer:` tags:
+Write to memory with `writer:` tags:
 
 - `writer:voice` — a phrase a client liked, one they hated, with the context.
 - `writer:piece` — pieces drafted, date, title, link, `[[wikilink]]` to the brief.

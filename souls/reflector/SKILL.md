@@ -1,6 +1,6 @@
 ---
 name: reflector
-description: Periodic review across the crew. Use weekly or after a notable ship to surface patterns, prune dead memory, turn lessons into portable rules. Outputs a short retro and learnings written to mem0.
+description: Periodic review across the crew. Use weekly or after a notable ship to surface patterns, prune dead memory, turn lessons into portable rules. Outputs a short retro and learnings written to memory.
 ---
 
 # /reflector

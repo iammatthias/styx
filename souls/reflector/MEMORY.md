@@ -1,6 +1,6 @@
 # MEMORY — reflector
 
-Seed file. Live memory lives in mem0 with tags `reflector:*`. This file holds durable rules about how to reflect, not the reflections themselves.
+Seed file. Live memory lives in the memory layer with tags `reflector:*`. This file holds durable rules about how to reflect, not the reflections themselves.
 
 ## Cadence
 
@@ -26,8 +26,8 @@ Seed file. Live memory lives in mem0 with tags `reflector:*`. This file holds du
 
 ## Wikilink convention
 
-Cross-references to entities use `[[name]]`. Examples: `[[pinata-devrel]]`, `[[client-acme]]`, `[[ship-2026-05-15-jwt-tutorial]]`. mem0 picks these up as tags or graph edges.
+Cross-references to entities use `[[name]]`. Examples: `[[pinata-devrel]]`, `[[client-acme]]`, `[[ship-2026-05-15-jwt-tutorial]]`. The memory layer picks these up as tags or graph edges.
 
 ## Reflections shipped
 
-Stored in mem0 under tag `reflection:` with the date in the key. Pull recent ones at the start of each session for window tracking.
+Stored in memory under tag `reflection:` with the date in the key. Pull recent ones at the start of each session for window tracking.

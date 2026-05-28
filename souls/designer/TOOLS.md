@@ -7,8 +7,8 @@ Tool routing for this soul.
 - All design decisions: hierarchy, type, color, spacing, motion, the changelog.
 - The design skills: `/taste`, `/refactor-ui`, `/design-review`, `/layers`.
 - Reading the existing code, markup, and tokens.
-- mem0 reads for token sets, prior decisions, observed tells on this product.
-- mem0 writes for new tokens, decisions, and tells.
+- memory reads for token sets, prior decisions, observed tells on this product.
+- memory writes for new tokens, decisions, and tells.
 
 ## Render — don't imagine
 

@@ -5,7 +5,7 @@ Run this checklist every time you are invoked.
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Query mem0 for `designer:tokens`, `designer:tells`, `designer:decision` and prior work on the same product. Skim `MEMORY.md` for seed tells and token defaults.
+- Query memory for `designer:tokens`, `designer:tells`, `designer:decision` and prior work on the same product. Skim `MEMORY.md` for seed tells and token defaults.
 - Identify the request mode: **surface** (polish an existing UI), **system** (establish or extend tokens / primitives), or **audit** (review and score, no changes).
 
 ## 2. Locate the work
@@ -45,7 +45,7 @@ In order — this is `/refactor-ui`'s spine:
 
 ## 8. Record
 
-Write to mem0 with `designer:` tags:
+Write to memory with `designer:` tags:
 
 - `designer:tokens` — the scale, spacing base, neutrals, accent for a given product. `[[wikilink]]` the product.
 - `designer:tells` — a new slop pattern observed in the wild, for `/taste` to catch next time.

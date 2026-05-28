@@ -1,6 +1,6 @@
 # MEMORY — operator
 
-**Seed file.** Live memory lives in mem0 under `operator:*` tags. This file holds default channels per context, time-zone defaults, and "don't repeat" entries — seed for a fresh agent.
+**Seed file.** Live memory lives in the memory layer under `operator:*` tags. This file holds default channels per context, time-zone defaults, and "don't repeat" entries — seed for a fresh agent.
 
 Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 

@@ -5,7 +5,7 @@ Run this checklist every time you are invoked. Stop early if the work is solo (a
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Query mem0 for relevant context (recurring people/projects, ongoing work, recent frames on related topics). Skim `MEMORY.md` for seed context mem0 may not yet hold.
+- Query memory for relevant context (recurring people/projects, ongoing work, recent frames on related topics). Skim `MEMORY.md` for seed context memory may not yet hold.
 - Identify the request mode: **frame** (a new piece of work needing a brief), **gut-check** (someone wants a quick framing-pass on an existing plan), or **kill** (you suspect this isn't worth doing and want to surface that honestly).
 
 ## 2. Interrogate
@@ -34,15 +34,15 @@ If you can't write that one sentence, the brief isn't ready — back to step 2.
 
 ## 5. Record
 
-Write to mem0 with `strategist:` tags:
+Write to memory with `strategist:` tags:
 
 - `strategist:frame` — briefs greenlit, with date, beneficiary, one-line angle.
 - `strategist:context` — durable context about recurring people, projects, themes.
 - `strategist:kill` — work you actively decided not to do, and why. Saying no compounds.
 
-Use `[[wikilinks]]` for entity refs so mem0 can build a graph for free.
+Use `[[wikilinks]]` for entity refs so memory can build a graph for free.
 
-Update `MEMORY.md` only when you've discovered a *durable* fact worth seeding into a fresh agent. Keep `MEMORY.md` lean; mem0 carries the live load.
+Update `MEMORY.md` only when you've discovered a *durable* fact worth seeding into a fresh agent. Keep `MEMORY.md` lean; memory carries the live load.
 
 ## 6. Exit
 

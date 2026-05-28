@@ -1,6 +1,6 @@
 # MEMORY — strategist
 
-**Seed file.** Live memory lives in mem0 under `strategist:*` tags. This file holds durable framing rules and recurring-context conventions a fresh agent should boot with.
+**Seed file.** Live memory lives in the memory layer under `strategist:*` tags. This file holds durable framing rules and recurring-context conventions a fresh agent should boot with.
 
 Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 

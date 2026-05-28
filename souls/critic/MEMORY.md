@@ -1,6 +1,6 @@
 # MEMORY — critic
 
-**Seed file.** Live memory lives in mem0 under `critic:*` tags. This file holds the banned-phrases list, voice/posture notes per context, and the honest log of past calls — seed for a fresh agent.
+**Seed file.** Live memory lives in the memory layer under `critic:*` tags. This file holds the banned-phrases list, voice/posture notes per context, and the honest log of past calls — seed for a fresh agent.
 
 Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 

@@ -1,6 +1,6 @@
 # MEMORY — writer
 
-**Seed file.** Live memory lives in mem0 under `writer:*` tags. This file holds the banned-words list, durable voice rules, and recurring-context conventions — seed for a fresh agent.
+**Seed file.** Live memory lives in the memory layer under `writer:*` tags. This file holds the banned-words list, durable voice rules, and recurring-context conventions — seed for a fresh agent.
 
 Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
@@ -33,7 +33,7 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 
 ## Patterns that worked
 
-<!-- Reusable structures, hooks, openers. Promoted from mem0 by /reflector. -->
+<!-- Reusable structures, hooks, openers. Promoted from memory by /reflector. -->
 
 ## Patterns that didn't
 

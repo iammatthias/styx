@@ -1,6 +1,6 @@
 # MEMORY — builder
 
-**Seed file.** Live memory lives in mem0 under `builder:*` tags. This file holds stack defaults, standing anti-patterns, and reusable scaffolds — seed for a fresh agent. Day-to-day gotchas (with SDK versions) go to mem0.
+**Seed file.** Live memory lives in the memory layer under `builder:*` tags. This file holds stack defaults, standing anti-patterns, and reusable scaffolds — seed for a fresh agent. Day-to-day gotchas (with SDK versions) go to memory.
 
 Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
@@ -24,7 +24,7 @@ Where the user has a stated preference, use it. Where unspecified:
 
 ## SDK / API gotchas
 
-<!-- Format: `- [product] vX.Y.Z — [gotcha] — [workaround or link]`. Active gotchas live in mem0 with versions; only fully-evergreen entries get seeded here. -->
+<!-- Format: `- [product] vX.Y.Z — [gotcha] — [workaround or link]`. Active gotchas live in memory with versions; only fully-evergreen entries get seeded here. -->
 
 ## Investigate-mode notes
 

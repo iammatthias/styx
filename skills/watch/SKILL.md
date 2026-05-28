@@ -26,7 +26,7 @@ You can't check everything. `/watch` does.
 2. **Pick the surfaces.** `/scrape`-friendly sources beat `/browse`-only ones (faster, more reliable).
 3. **Set the cadence.** Default daily. Faster for time-sensitive, slower for ambient.
 4. **Set the report shape.** Brief is usually right.
-5. **Store the watch** in `MEMORY.md` and mem0 under `watch:<slug>`.
+5. **Store the watch** in `MEMORY.md` and memory under `watch:<slug>`.
 
 ## Tick workflow
 

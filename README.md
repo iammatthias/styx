@@ -105,7 +105,7 @@ Each soul folder is five files:
 | `HEARTBEAT.md` | Per-invocation checklist. Read at wake. |
 | `SKILL.md` | [agentskills.io](https://agentskills.io) frontmatter so Hermes can discover it via progressive disclosure |
 | `TOOLS.md` | What runs natively vs. delegates to Claude Code via `delegate_task` |
-| `MEMORY.md` | Seed file. Live memory lives in mem0. |
+| `MEMORY.md` | Seed file. Live memory lives in the memory layer. |
 
 ## Souls vs. skills
 
@@ -125,11 +125,11 @@ Three ways, in increasing isolation:
 
 Two layers.
 
-**mem0** is the live layer. Each soul reads its tags at orient (`writer:voice`, `builder:gotcha`, `scout:thread`, etc.) and writes new facts at exit. mem0 handles consolidation when it fills.
+**Memory** is the live layer. Each soul reads its tags at orient (`writer:voice`, `builder:gotcha`, `scout:thread`, etc.) and writes new facts at exit. The memory layer handles consolidation when it fills.
 
-**`MEMORY.md`** is the seed layer. Durable rules, banned-words lists, stack defaults, recurring contexts. What a fresh mem0 instance should boot with — not a journal.
+**`MEMORY.md`** is the seed layer. Durable rules, banned-words lists, stack defaults, recurring contexts. What a fresh memory store should boot with — not a journal.
 
-Cross-reference entities with `[[wikilinks]]`: `[[pinata]]`, `[[client-acme]]`, `[[ship-2026-05-15]]`. mem0 picks these up for graph-style queries. `/reflector` prunes both layers on cadence.
+Cross-reference entities with `[[wikilinks]]`: `[[pinata]]`, `[[client-acme]]`, `[[ship-2026-05-15]]`. The memory layer picks these up for graph-style queries. `/reflector` prunes both layers on cadence.
 
 ## Adding a soul
 
@@ -152,7 +152,7 @@ If you're an agent landing here for the first time:
 
 - `SOUL.md` (root) is your base identity. Read it first.
 - This README and `TEAM.md` are next, in that order. Don't read every soul's `SOUL.md` eagerly — Hermes's progressive disclosure exists for a reason. Load a soul when you decide to switch into it.
-- mem0 is your memory. Read it at orient, write at record. `MEMORY.md` files are seeds, not journals.
+- Memory is the live layer. Read it at orient, write at record. `MEMORY.md` files are seeds, not journals.
 - Wikilinks (`[[name]]`) are tags. Use them so `/reflector` can prune by topic.
 - Announce posture switches in one line. The user can't see your thinking; they can see your output.
 - When in doubt about external action, use the safety primitives in the root soul (careful, freeze, guard). Internal action — reading, organizing, learning — moves boldly.
@@ -164,7 +164,7 @@ styx is a distillation, not an invention:
 - **`SOUL` / `HEARTBEAT` / `MEMORY` three-file convention** — [paperclip](https://github.com/paperclipai/paperclip)
 - **Forcing questions, investigate mode, safety primitives, the sprint loop** — [gstack](https://github.com/garrytan/gstack)
 - **Markdown memory in git, wikilink edges** — [gbrain](https://github.com/garrytan/gbrain)
-- **Skill discovery, mem0 layering, `delegate_task`, `/personality` overlays** — [Hermes](https://github.com/NousResearch/hermes-agent)
+- **Skill discovery, memory layering, `delegate_task`, `/personality` overlays** — [Hermes](https://github.com/NousResearch/hermes-agent)
 - **The `/designer` soul and its skills** — distilled from [impeccable](https://github.com/pbakaus/impeccable) (anti-slop tells, the design domains), [taste-skill](https://github.com/Leonxlnx/taste-skill) (variance/density/motion dials, style variants), [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin) (hierarchy-first fundamentals), and [layers-skills](https://github.com/jamiemill/layers-skills) (the seven layers of product design)
 - **`/skill-cleaner`, `/pr-review`, `/triage`, `/cli-design`, `/to-markdown`, `/domains`, `/wrangler`, `/image-gen`** — lifted from [agent-scripts](https://github.com/steipete/agent-scripts) (skill-cleaner, github-deep-review, github-project-triage, create-cli, markdown-converter, cloudflare-registrar + domain-dns-ops, wrangler, nano-banana-pro + openai-image-gen), de-Codex'd, de-personalized, and made runtime-agnostic
 - **`/cache-audit`** — distilled from [prompt-cache-skills](https://github.com/OnlyTerp/prompt-cache-skills), which ships per-harness patches for Cline/Roo/Continue/OpenCode/Aider; collapsed into one runtime-agnostic procedure — the four recurring bugs, the fix, and on-the-wire verification

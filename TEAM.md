@@ -62,7 +62,7 @@ A handoff is the only place where work changes hands. Everything else is solo wo
 
 ## Memory model
 
-The crew runs on mem0 (live) + `MEMORY.md` seed files. Each soul reads its tags at orient and writes new facts at exit. Wikilinks (`[[entity]]`) cross-reference between souls without duplication. `/reflector` prunes both layers on cadence.
+The crew runs on memory (live) + `MEMORY.md` seed files. Each soul reads its tags at orient and writes new facts at exit. Wikilinks (`[[entity]]`) cross-reference between souls without duplication. `/reflector` prunes both layers on cadence.
 
 ## Ownership of shared facts
 

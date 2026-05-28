@@ -7,8 +7,8 @@ Tool routing for this soul. This is the soul that does the most cross-model hand
 - Reading code, understanding APIs, planning the snippet.
 - Running quick commands (file reads, package version checks, doc lookups).
 - Writing the README/setup notes that accompany a snippet.
-- mem0 reads for SDK gotchas, prior scaffolds, anti-patterns.
-- mem0 writes for new gotchas and reusable patterns observed.
+- memory reads for SDK gotchas, prior scaffolds, anti-patterns.
+- memory writes for new gotchas and reusable patterns observed.
 
 ## Offload to Claude Code (via `delegate_task`)
 

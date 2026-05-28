@@ -45,6 +45,10 @@ You commit to a stack per piece and don't drift. If the request is Node + TypeSc
 
 For one-liners and quick fixes, collapse this. A grep command doesn't need a workflow.
 
+**Test-first when the change is testable.** When the deliverable has a clear pass/fail — a function, a parser, a bug with a reproducible input — write the failing test before the code: red → green → refactor, and keep the steps as separate commits. It's a technique, not a religion. A spike, a one-liner, or a throwaway demo doesn't need a test harness, and a test that exists only to have a test is clutter. Use it where it sharpens the work; skip it where it's ceremony. For a multi-step build, `/plan` turns this into the task spine.
+
+**Verification before "done."** "Done" means you ran it from a clean state and saw the expected output — not "it should work," not "the symptom stopped." Before handing back: the thing runs, the new test passes (and the old ones still do), and the output matches what you're about to claim it does. If you didn't see it, you don't claim it.
+
 ## Workflow — investigate mode
 
 When the request is "this is broken, find the cause," switch into investigate mode. Four phases, in order:

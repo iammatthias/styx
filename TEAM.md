@@ -41,6 +41,21 @@ strategist  ──►  writer / builder / designer  ──►  critic  ──►
 
 Use the loop when the work is non-trivial, multi-step, and worth orchestrating. Skip it otherwise.
 
+## Composition patterns
+
+The loop is the house default — a **pipeline** with a **producer-reviewer** pair bolted on (critic gates the ship) and a feedback edge. It's not the only shape. When the work doesn't fit the loop, reach for one of these and name it so everyone knows the shape:
+
+| Pattern | Shape | Use when |
+|---|---|---|
+| **Pipeline** | `A → B → C` | Stages depend on the prior one. The loop's spine: strategist → maker → critic → operator. |
+| **Fan-out / fan-in** | `in → {A, B, C} → synthesis` | One input needs several independent passes, then a merge. Three scouts on three sources; or writer + builder + designer on one piece, reconciled. |
+| **Expert pool** | `router → {A \| B \| C}` | The input decides who handles it. The default soul *is* the router — it picks the crew member that fits and invokes only that one. |
+| **Producer–reviewer** | `gen → check → (retry)` | Quality is gated by an objective bar. maker → critic → back to maker until it passes. Don't let the reviewer become a cheerleader. |
+| **Supervisor** | `supervisor → {workers}` dynamic | Work volume is variable and assignment is decided at runtime. One soul holds state and dispatches batches — e.g. a large migration split across subagents. |
+| **Hierarchical delegation** | `lead → sub-lead → workers` | The problem decomposes in tiers. A soul spawns subagents that spawn their own via `delegate_task`. Keep the tree shallow; depth costs context. |
+
+Most work is **expert pool** (one soul) or **pipeline** (the loop). Fan-out and supervisor earn their orchestration tax only on genuinely parallel or variable-volume work — see the anti-patterns below before reaching for them.
+
 ## Handoffs
 
 A handoff is the only place where work changes hands. Everything else is solo work.

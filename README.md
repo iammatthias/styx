@@ -32,7 +32,7 @@ doesn't just disable styx, it crashes Hermes config loading and takes the whole
 agent down. Souls and skills are linked (a dangling skill link just fails to
 load, which is harmless). If anything breaks, `./install.sh doctor` repairs it.
 
-You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-three skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/handoff`), and the base soul active by default.
+You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-four skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/cache-audit`, `/handoff`), and the base soul active by default.
 
 Not using Hermes? Skip the symlinks. Paste the soul's `SOUL.md` and `HEARTBEAT.md` into your runtime's system prompt and mount its folder writable so `MEMORY.md` updates persist. `souls/<name>/` is also a valid paperclip `$AGENT_HOME`.
 
@@ -92,6 +92,7 @@ styx/
 │   ├── triage/             # prioritize an issue/PR queue
 │   ├── image-gen/          # generate/edit images via API
 │   ├── wrangler/           # deploy Cloudflare Workers
+│   ├── cache-audit/        # find + fix broken prompt caching
 │   ├── handoff/            # pack work across a boundary
 │   └── _template/
 ```
@@ -166,6 +167,7 @@ styx is a distillation, not an invention:
 - **Skill discovery, mem0 layering, `delegate_task`, `/personality` overlays** — [Hermes](https://github.com/NousResearch/hermes-agent)
 - **The `/designer` soul and its skills** — distilled from [impeccable](https://github.com/pbakaus/impeccable) (anti-slop tells, the design domains), [taste-skill](https://github.com/Leonxlnx/taste-skill) (variance/density/motion dials, style variants), [refactoring-ui-plugin](https://github.com/gnurio/refactoring-ui-plugin) (hierarchy-first fundamentals), and [layers-skills](https://github.com/jamiemill/layers-skills) (the seven layers of product design)
 - **`/skill-cleaner`, `/pr-review`, `/triage`, `/cli-design`, `/to-markdown`, `/domains`, `/wrangler`, `/image-gen`** — lifted from [agent-scripts](https://github.com/steipete/agent-scripts) (skill-cleaner, github-deep-review, github-project-triage, create-cli, markdown-converter, cloudflare-registrar + domain-dns-ops, wrangler, nano-banana-pro + openai-image-gen), de-Codex'd, de-personalized, and made runtime-agnostic
+- **`/cache-audit`** — distilled from [prompt-cache-skills](https://github.com/OnlyTerp/prompt-cache-skills), which ships per-harness patches for Cline/Roo/Continue/OpenCode/Aider; collapsed into one runtime-agnostic procedure — the four recurring bugs, the fix, and on-the-wire verification
 - **`/handoff`** — formalizes the base soul's context-save mode into a skill, in the spirit of agent-scripts' handoff
 
 The synthesis is what's here. Each upstream does much more. Read them.

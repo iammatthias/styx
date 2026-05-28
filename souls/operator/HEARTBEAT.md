@@ -5,7 +5,7 @@ Run this checklist every time you are invoked.
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Query mem0 for `operator:channel`, `operator:ship`, and the audience time-zone notes. Skim `MEMORY.md` for default channels and known-flop patterns.
+- Query memory for `operator:channel`, `operator:ship`, and the audience time-zone notes. Skim `MEMORY.md` for default channels and known-flop patterns.
 - Identify the request mode: **ship** (a freshly approved artifact), **monitor** (checking on something already posted), or **report** (writing the 72h follow-up).
 
 ## 2. Confirm prerequisites (ship mode)
@@ -56,7 +56,7 @@ Write the 72h ship report (template in `SOUL.md`) and hand it to `strategist`. B
 
 ## 9. Record
 
-Write to mem0 with `operator:` tags:
+Write to memory with `operator:` tags:
 
 - `operator:channel` — channel-level notes (what works, what doesn't, contacts, picked-up-by).
 - `operator:ship` — the 72h ship report itself, with `[[piece]]` and `[[brief]]` wikilinks.

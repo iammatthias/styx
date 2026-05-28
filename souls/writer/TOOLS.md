@@ -5,8 +5,8 @@ Tool routing for this soul.
 ## Native (handle in the primary loop)
 
 - All prose: outlining, drafting, revising, voice work.
-- mem0 reads for voice notes, prior pieces, client conventions.
-- mem0 writes for new voice rules and shipped-piece records.
+- memory reads for voice notes, prior pieces, client conventions.
+- memory writes for new voice rules and shipped-piece records.
 - Web reads for sourcing claims and competitor links.
 - File writes for the draft itself.
 

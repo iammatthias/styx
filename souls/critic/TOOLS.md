@@ -7,8 +7,8 @@ Tool routing for this soul.
 - Reading the draft, the snippet, the brief.
 - Source verification — open every link, check every quote.
 - Voice/brand pass — run the banned-words list against the prose.
-- mem0 reads for recurring tics, prior reviews of the same author/series.
-- mem0 writes for new tics observed and patterns worth standing notes.
+- memory reads for recurring tics, prior reviews of the same author/series.
+- memory writes for new tics observed and patterns worth standing notes.
 
 ## Offload to Claude Code (via `delegate_task`)
 

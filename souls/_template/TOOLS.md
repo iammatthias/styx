@@ -4,9 +4,9 @@ Tool routing for this soul. Codex is the primary; Claude Code is for offloaded c
 
 ## Native (handle in the primary loop)
 
-- <Things this soul does in-loop. mem0 reads are nearly always native.>
-- mem0 reads (tags relevant to this soul).
-- mem0 writes (tags relevant to this soul).
+- <Things this soul does in-loop. Memory reads are nearly always native.>
+- memory reads (tags relevant to this soul).
+- memory writes (tags relevant to this soul).
 
 ## Offload to Claude Code (via `delegate_task`)
 

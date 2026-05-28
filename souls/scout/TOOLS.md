@@ -6,8 +6,8 @@ Tool routing for this soul.
 
 - Web search and fetch — the bread and butter.
 - File reads when scouting a codebase or local archive.
-- mem0 reads for prior scout reports on related topics (avoid re-scouting).
-- mem0 writes for `scout:report`, `scout:thread`, `scout:source`.
+- memory reads for prior scout reports on related topics (avoid re-scouting).
+- memory writes for `scout:report`, `scout:thread`, `scout:source`.
 - Note-taking while scouting (a scratch buffer of findings as you go).
 
 ## Offload to Claude Code (via `delegate_task`)

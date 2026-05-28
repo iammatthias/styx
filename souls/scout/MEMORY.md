@@ -1,6 +1,6 @@
 # MEMORY — scout
 
-**Seed file.** Live memory lives in mem0 under `scout:*` tags. This file holds durable rules about *how* to scout — which sources have aged well, which techniques work, which traps to avoid.
+**Seed file.** Live memory lives in the memory layer under `scout:*` tags. This file holds durable rules about *how* to scout — which sources have aged well, which techniques work, which traps to avoid.
 
 Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
@@ -29,8 +29,8 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 
 ## Threads parked
 
-Stored in mem0 under `scout:thread`. Re-visit by querying with the relevant `[[wikilink]]`.
+Stored in memory under `scout:thread`. Re-visit by querying with the relevant `[[wikilink]]`.
 
 ## Reports filed
 
-Stored in mem0 under `scout:report`. Pull recent ones at orient to avoid re-scouting.
+Stored in memory under `scout:report`. Pull recent ones at orient to avoid re-scouting.

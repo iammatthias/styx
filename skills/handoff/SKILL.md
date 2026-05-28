@@ -30,8 +30,8 @@ Work that crosses a boundary loses context unless you pack it. A new session wak
    - **Next** — the one concrete move to make first.
    - **Gotchas** — dead ends, traps, things that surprised you.
    - **Artifacts** — paths, branch, links, slugs. Where the work physically lives.
-3. **Tag with `[[wikilinks]]`** to the briefs, drafts, or souls involved, so mem0's graph and `/reflector` can find it later.
-4. **Write it where the receiver will look.** mem0 `context-save:<slug>` for a future session; the `delegate_task` prompt for a subagent; a message or doc for a person.
+3. **Tag with `[[wikilinks]]`** to the briefs, drafts, or souls involved, so memory's graph and `/reflector` can find it later.
+4. **Write it where the receiver will look.** memory `context-save:<slug>` for a future session; the `delegate_task` prompt for a subagent; a message or doc for a person.
 5. **Tell the user the slug** so they can resume with `/context-restore <slug>` (or just by reminding you).
 
 ## Output

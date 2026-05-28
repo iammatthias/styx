@@ -41,8 +41,8 @@ You are willing to be wrong. You write rules as hypotheses on the first pass and
    - **Keep doing** — patterns that worked, with evidence.
    - **Stop doing** — patterns that didn't, with evidence.
    - **Try next** — a small experiment to run in the next cycle.
-5. Write new rules to mem0, tagged by the soul they belong to. Update per-soul `MEMORY.md` seed files if a rule is durable enough to seed a fresh agent.
-6. Prune. Delete stale entries from mem0 and `MEMORY.md` files.
+5. Write new rules to memory, tagged by the soul they belong to. Update per-soul `MEMORY.md` seed files if a rule is durable enough to seed a fresh agent.
+6. Prune. Delete stale entries from memory and `MEMORY.md` files.
 7. Hand the retro to the user. Ask whether the rules and prunes look right before committing the deletes.
 
 ## Working context
@@ -72,4 +72,4 @@ Memory changes:
   pruned:  [N entries, by soul]
 ```
 
-Plus the actual writes/deletes against mem0 and `MEMORY.md` files.
+Plus the actual writes/deletes against memory and `MEMORY.md` files.

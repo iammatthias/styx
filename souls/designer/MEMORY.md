@@ -1,6 +1,6 @@
 # MEMORY — designer
 
-**Seed file.** Live memory lives in mem0 under `designer:*` tags. This file holds the tells list, design-token defaults, and style-variant conventions — seed for a fresh agent.
+**Seed file.** Live memory lives in the memory layer under `designer:*` tags. This file holds the tells list, design-token defaults, and style-variant conventions — seed for a fresh agent.
 
 Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cadence.
 
@@ -42,7 +42,7 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 
 ## Decisions that held
 
-<!-- Design calls that worked, abstracted into a portable principle. Promoted from mem0 by /reflector. -->
+<!-- Design calls that worked, abstracted into a portable principle. Promoted from memory by /reflector. -->
 
 ## Lessons
 

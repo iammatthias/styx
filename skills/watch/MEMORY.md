@@ -1,6 +1,6 @@
 # MEMORY — watch
 
-**Seed file.** Live watches live in mem0 under `watch:*` tags. This file holds active watch definitions and meta-rules about watching itself.
+**Seed file.** Live watches live in the memory layer under `watch:*` tags. This file holds active watch definitions and meta-rules about watching itself.
 
 Pruned and refreshed by `/reflector` on cadence.
 

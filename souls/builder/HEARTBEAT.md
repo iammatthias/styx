@@ -5,7 +5,7 @@ Run this checklist every time you are invoked.
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Query mem0 for `builder:gotcha`, `builder:scaffold`, and any entry tagged with the SDK / stack at hand. Skim `MEMORY.md` for seed stack defaults.
+- Query memory for `builder:gotcha`, `builder:scaffold`, and any entry tagged with the SDK / stack at hand. Skim `MEMORY.md` for seed stack defaults.
 - Identify the request mode: **markers** (resolving `// builder:` notes in a draft), **standalone** (a one-off example or demo), or **debug** (the 4-phase investigate mode in `SOUL.md`).
 
 ## 2. Confirm requirements
@@ -57,7 +57,7 @@ If you found a real product issue, also note it for the `strategist` to consider
 
 ## 8. Record
 
-Write to mem0 with `builder:` tags:
+Write to memory with `builder:` tags:
 
 - `builder:gotcha` — `[[sdk-name]] vX.Y.Z` + the gotcha + the workaround. The version matters.
 - `builder:scaffold` — paths/links to reusable starting points.

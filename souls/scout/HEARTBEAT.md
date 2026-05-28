@@ -5,7 +5,7 @@ Run this checklist every time you are invoked.
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Query mem0 for `scout:report` (prior scouts on related topics — don't re-scout what you already mapped) and any `scout:thread` (threads you parked for later).
+- Query memory for `scout:report` (prior scouts on related topics — don't re-scout what you already mapped) and any `scout:thread` (threads you parked for later).
 - Identify the request mode: **scout** (a new question), **return** (re-visit a parked thread), or **triangulate** (you have a finding from one source and need to confirm).
 
 ## 2. Confirm the question and the budget
@@ -28,7 +28,7 @@ Don't start with the rabbit hole.
 - Follow leads. Note what you found, what was a dead end, what surprised you.
 - On any surprise: slow down. Triangulate before adopting it as a finding.
 - On any clean confirmation of what you already thought: be suspicious. Re-check.
-- Mark threads you don't have time for as `[[scout-thread-<slug>]]` — they go to mem0 for later return.
+- Mark threads you don't have time for as `[[scout-thread-<slug>]]` — they go to memory for later return.
 
 ## 5. Triangulate findings
 
@@ -48,7 +48,7 @@ Use the template in `SOUL.md`: Found / Pattern / Hunch / Open / Next move. Field
 
 ## 8. Record
 
-Write to mem0 with `scout:` tags:
+Write to memory with `scout:` tags:
 
 - `scout:report` — the report itself, with `[[wikilinks]]` to topics and souls relevant.
 - `scout:thread` — parked threads worth returning to, with one line on where to start.

@@ -5,14 +5,14 @@ Run this checklist every time you are invoked.
 ## 1. Orient
 
 - Read `SOUL.md` if this is a fresh session.
-- Query mem0 for the last `reflection:` entry. Note the window.
-- If no work has shipped since the last reflection, write a one-line "no-op" reflection to mem0 and exit at step 7.
+- Query memory for the last `reflection:` entry. Note the window.
+- If no work has shipped since the last reflection, write a one-line "no-op" reflection to memory and exit at step 7.
 
 ## 2. Pull the log
 
 For the window since the last reflection:
 
-- Shipped artifacts (from `operator` ship reports in mem0).
+- Shipped artifacts (from `operator` ship reports in memory).
 - Briefs greenlit (from `strategist`).
 - Drafts shipped vs. drafts killed (from `writer` and `critic`).
 - Builder gotchas observed (from `builder`).
@@ -39,15 +39,15 @@ Use the template in `SOUL.md`. Three buckets: Keep / Stop / Try. Every entry has
 
 Stage them; don't commit yet:
 
-- Adds: new rules to mem0, tagged by soul. Each rule one sentence, sourced.
-- Prunes: stale entries identified in mem0 and `MEMORY.md` files.
+- Adds: new rules to memory, tagged by soul. Each rule one sentence, sourced.
+- Prunes: stale entries identified in memory and `MEMORY.md` files.
 
 ## 7. Hand off
 
 - Show the retro and the proposed memory changes to the user.
 - Ask: "Apply the prunes and rule adds?"
-- On approval, write to mem0 and update `MEMORY.md` files.
-- Append the retro itself to mem0 with a `reflection:` tag.
+- On approval, write to memory and update `MEMORY.md` files.
+- Append the retro itself to memory with a `reflection:` tag.
 
 ## 8. Exit
 

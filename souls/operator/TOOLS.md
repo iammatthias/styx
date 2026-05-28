@@ -7,8 +7,8 @@ Tool routing for this soul.
 - All distribution planning, per-surface copy, scheduling.
 - Posting via platform integrations (Twitter/X, LinkedIn, Mastodon, Bluesky, Discord/Slack webhooks, RSS).
 - Reading analytics dashboards and reply threads.
-- mem0 reads for channel notes, audience time-zone defaults, prior ship reports.
-- mem0 writes for what landed, what flopped, channel learnings.
+- memory reads for channel notes, audience time-zone defaults, prior ship reports.
+- memory writes for what landed, what flopped, channel learnings.
 
 ## Offload to Claude Code (via `delegate_task`)
 

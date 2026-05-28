@@ -16,7 +16,7 @@ Ten seconds before `/critic`. Catches the mechanical stuff so the smart review c
 
 ## What it checks
 
-Reads the seed banned-phrases list in `souls/writer/MEMORY.md` plus any live additions in mem0 under `writer:banned`. Then scans for:
+Reads the seed banned-phrases list in `souls/writer/MEMORY.md` plus any live additions in memory under `writer:banned`. Then scans for:
 
 - **Banned phrases** — the explicit list (*delve, leverage, unlock, supercharge, seamless, robust, cutting-edge, game-changing, in today's fast-paced world, it's important to note, navigate the landscape, excited to share,* and whatever else is current).
 - **AI-tells** — sentences starting with "It's important to note that," paragraphs that summarize the previous paragraph, hedging strings (*might possibly potentially*), false-balance ("on one hand...on the other hand" without resolution).

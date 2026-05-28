@@ -5,7 +5,7 @@ Tool routing for this soul. Codex is the primary; Claude Code is for offloaded c
 ## Native (handle in the primary loop)
 
 - All reasoning, framing, brief writing.
-- mem0 reads and writes.
+- memory reads and writes.
 - Quick web search and reading for context.
 - File reads/writes for briefs and other artifacts.
 

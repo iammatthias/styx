@@ -28,6 +28,7 @@ Multi-step procedures any soul can invoke. Following [agentskills.io](https://ag
 | [`/triage`](./triage) | Prioritize an issue/PR queue into maintainer action cards. |
 | [`/image-gen`](./image-gen) | Generate or edit images via an image API. |
 | [`/wrangler`](./wrangler) | Deploy Cloudflare Workers, tail logs, manage KV/R2/D1. |
+| [`/cache-audit`](./cache-audit) | Find and fix broken prompt caching in a harness/SDK, then prove the hit on the wire. |
 | [`/handoff`](./handoff) | Pack work to hand across a session, soul, agent, or person. |
 
 ## Souls vs. skills
@@ -59,6 +60,8 @@ Seven skills are lifted from [agent-scripts](https://github.com/steipete/agent-s
 - **`/domains`** ← cloudflare-registrar + domain-dns-ops (registrar + DNS golden path)
 - **`/wrangler`** ← wrangler (Workers deploy/tail, KV/R2/D1, account guardrails)
 - **`/image-gen`** ← nano-banana-pro + openai-image-gen (draft→iterate→final, prompt templates)
+
+`/cache-audit` is lifted from [prompt-cache-skills](https://github.com/OnlyTerp/prompt-cache-skills), which ships per-harness patches (Cline, Roo, Continue, OpenCode, Aider). The 13 fixes collapse to four recurring bugs — volatile prefix, no breakpoint, wrong TTL, missing provider cache key — so styx carries the methodology as one runtime-agnostic procedure with on-the-wire verification, not the brittle pinned diffs.
 
 `/handoff` is a Styx original — it promotes the base soul's context-save mode (in [`SOUL.md`](../SOUL.md)) into a first-class skill, in the spirit of agent-scripts' handoff.
 

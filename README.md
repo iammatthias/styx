@@ -32,7 +32,9 @@ doesn't just disable styx, it crashes Hermes config loading and takes the whole
 agent down. Souls and skills are linked (a dangling skill link just fails to
 load, which is harmless). If anything breaks, `./install.sh doctor` repairs it.
 
-You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-four skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/cache-audit`, `/handoff`), and the base soul active by default.
+You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-seven skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/cache-audit`, `/handoff`, `/plan`, `/worktrees`, `/document`), and the base soul active by default.
+
+Optional [Claude Code hooks](./hooks) wire two of styx's ideas into the harness — a SessionStart that surfaces the last `/handoff`, and a PreToolUse guard that enforces the base soul's "careful" primitive. Install them with `./install.sh hooks`. Hermes doesn't need them; `HEARTBEAT.md` and the safety primitives cover the same ground.
 
 Not using Hermes? Skip the symlinks. Paste the soul's `SOUL.md` and `HEARTBEAT.md` into your runtime's system prompt and mount its folder writable so `MEMORY.md` updates persist. `souls/<name>/` is also a valid paperclip `$AGENT_HOME`.
 
@@ -94,7 +96,11 @@ styx/
 │   ├── wrangler/           # deploy Cloudflare Workers
 │   ├── cache-audit/        # find + fix broken prompt caching
 │   ├── handoff/            # pack work across a boundary
+│   ├── plan/               # bite-sized task plan + checkpointed execution
+│   ├── worktrees/          # isolate a branch in its own git worktree
+│   ├── document/           # produce/edit .docx/.pptx/.xlsx/.pdf
 │   └── _template/
+└── hooks/                  # optional Claude Code hooks (SessionStart, PreToolUse guard)
 ```
 
 Each soul folder is five files:

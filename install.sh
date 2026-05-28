@@ -6,6 +6,7 @@
 #   ./install.sh            install or update (pull, wire, build bundles)
 #   ./install.sh sync       alias for install
 #   ./install.sh doctor     check for dangling links / missing checkout and repair
+#   ./install.sh hooks      merge the Claude Code hooks into ~/.claude/settings.json
 #
 # Flags:
 #   --no-pull               skip "git pull" during install/sync
@@ -23,6 +24,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HERMES_HOME="${HERMES_HOME:-$HOME/.hermes}"
 SKILLS_DIR="$HERMES_HOME/skills"
+CLAUDE_HOME="${CLAUDE_HOME:-$HOME/.claude}"
 
 NO_PULL=0
 NO_BUNDLES=0
@@ -33,6 +35,7 @@ for arg in "$@"; do
   case "$arg" in
     install|sync) MODE="install" ;;
     doctor)       MODE="doctor" ;;
+    hooks)        MODE="hooks" ;;
     --no-pull)    NO_PULL=1 ;;
     --no-bundles) NO_BUNDLES=1 ;;
     --force)      FORCE=1 ;;
@@ -229,7 +232,72 @@ do_doctor() {
   fi
 }
 
+# =============================================================================
+# Merge the styx Claude Code hooks into ~/.claude/settings.json. Idempotent:
+# drops any prior styx hook entries (matched by the checkout path) and re-adds
+# the current ones, leaving the user's other hooks untouched. Backs up first.
+do_hooks() {
+  step "styx hooks → $CLAUDE_HOME/settings.json"
+
+  if ! command -v python3 >/dev/null 2>&1; then
+    err "python3 required to merge JSON safely — not found"
+    exit 1
+  fi
+
+  local settings="$CLAUDE_HOME/settings.json"
+  local src="$SCRIPT_DIR/hooks/hooks.json"
+  mkdir -p "$CLAUDE_HOME"
+
+  if [ -f "$settings" ]; then
+    cp -f "$settings" "$settings.bak.$(date +%Y%m%d%H%M%S)"
+    ok "backed up existing settings.json"
+  fi
+
+  STYX_DIR="$SCRIPT_DIR" SETTINGS="$settings" SRC="$src" python3 - <<'PY'
+import json, os, sys
+
+styx = os.environ["STYX_DIR"]
+settings_path = os.environ["SETTINGS"]
+src_path = os.environ["SRC"]
+
+with open(src_path) as f:
+    incoming = json.load(f)["hooks"]
+# Substitute the absolute checkout path into the command strings.
+for event, groups in incoming.items():
+    for g in groups:
+        for h in g.get("hooks", []):
+            h["command"] = h["command"].replace("__STYX_DIR__", styx)
+
+settings = {}
+if os.path.exists(settings_path):
+    with open(settings_path) as f:
+        try:
+            settings = json.load(f)
+        except json.JSONDecodeError:
+            print("  existing settings.json is not valid JSON — aborting", file=sys.stderr)
+            sys.exit(1)
+
+hooks = settings.setdefault("hooks", {})
+
+def is_styx(group):
+    return any(styx in h.get("command", "") for h in group.get("hooks", []))
+
+for event, groups in incoming.items():
+    existing = [g for g in hooks.get(event, []) if not is_styx(g)]
+    hooks[event] = existing + groups
+
+with open(settings_path, "w") as f:
+    json.dump(settings, f, indent=2)
+    f.write("\n")
+print("  merged SessionStart + PreToolUse(Bash) hooks")
+PY
+
+  ok "hooks installed — restart Claude Code to load them"
+  echo "  remove: delete the styx entries from $settings, or restore a .bak"
+}
+
 case "$MODE" in
   install) do_install ;;
   doctor)  do_doctor ;;
+  hooks)   do_hooks ;;
 esac

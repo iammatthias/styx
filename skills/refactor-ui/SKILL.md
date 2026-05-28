@@ -19,6 +19,14 @@ Take a UI that works and make it look like someone with taste built it. Fundamen
 - Just detecting tells → `/taste`.
 - Scoring the result → `/design-review`.
 
+## Infer the direction first
+
+Before the dials, read what you've got. Don't default to one house style — let the work tell you where it's going.
+
+- **From a brief** — pull the intended audience, mood, and references. A fintech dashboard and a indie zine want opposite dials; the brief says which.
+- **From existing code (redesign)** — audit before you touch. Map the current hierarchy, spacing system (or absence of one), type scale, and color logic. Name what's actually broken — usually hierarchy or spacing, rarely color — so you fix the cause, not the symptom. This is the `/layers` instinct applied to a surface: don't repaint a wall that's structurally cracked.
+- **No brief, no precedent** — infer from the product's job and state your read in one line before proceeding, so the user can correct the direction before you build on it.
+
 ## Set the dials first
 
 State these before you touch anything. They scope every decision below.
@@ -65,3 +73,4 @@ open:      [decisions for /critic or the user]
 - Don't add motion without a `prefers-reduced-motion` path.
 - Don't introduce a tell `/taste` would flag. You fix slop; you don't add it.
 - Don't gold-plate past the brief. Ship the upgrade, not your portfolio.
+- Pre-flight before handing back: the code is complete and runnable — no truncation, no `/* … */` standing in for the part that matters, no half-applied variant. A snippet that won't paste-and-run isn't a deliverable.

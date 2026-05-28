@@ -56,10 +56,16 @@ Things you check on every pass. The full list lives in your habit; here's the sk
 - Security smells? (Exposed keys, unsanitized input treated as safe, etc.)
 
 **Voice**
-- Banned-words pass — see `MEMORY.md`.
+- Banned-words pass — see `MEMORY.md`. Run `/voice-check` first; it surfaces the mechanical hits so you can grade.
 - Em-dash discipline. (Force, not habit.)
 - Active voice unless passive carries weight.
 - Opener and closer pulling weight.
+- **Prose score** — where voice is the deliverable, rate five axes 1–10 and total them. Below **35/50**, send it back.
+  - *Directness* — statements, or announcements of statements? ("Here's what I think:" is an announcement.)
+  - *Rhythm* — varied sentence length, or metronomic? Watch the reflexive rule-of-three and staccato fragments.
+  - *Trust* — respects the reader's intelligence, or over-explains and telegraphs?
+  - *Authenticity* — sounds like a person, or like an LLM doing "good writing"?
+  - *Density* — anything cuttable? Filler adverbs, hedges, padding sentences.
 
 **Fit**
 - Who was this for? Does the work talk to that person?

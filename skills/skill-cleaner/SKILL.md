@@ -27,6 +27,7 @@ Every `SKILL.md` description sits in Hermes's Level-0 metadata — always loaded
 - **Duplicates.** Same `name`, or near-identical description/body, across `skills/` and `souls/`. Deliberate analogs (`/taste`↔`/voice-check`) are not duplicates — they name the analogy and split by domain.
 - **Orphans.** A skill nothing references — not in the README tables, not in `TEAM.md`, not cross-linked from another skill or soul. Either wire it in or cut it.
 - **Name/dir drift.** Frontmatter `name` must match the directory, or Hermes's `/<name>` invocation breaks.
+- **Spec conformance.** Frontmatter follows the [Agent Skills spec](https://github.com/anthropics/skills) (agentskills.io): `name` and `description` both present and non-empty; `name` lowercase with hyphens (no spaces, no caps, matching the dir). A skill missing `description` is invisible to discovery; a malformed `name` doesn't route. Flag any frontmatter that wouldn't load under a strict host parser.
 - **Runtime fit.** A skill whose tools aren't available in the current runtime is dead weight — it loads into Level-0 metadata, routes a request, then fails. `/browse` needs Chromium, `/domains` and `/wrangler` need Cloudflare creds, `/image-gen` needs an image API, `/to-markdown` needs markitdown + yt-dlp. Flag the ones *this* runtime can't actually run.
 - **Host overlap.** When styx loads into a host that ships its own commands (Claude Code, etc.), a styx skill that duplicates a native one is two routes for one job. Name the overlap and which to prefer — the host's version may be better or worse, so this is a flag, not a cut.
 - **Trigger nouns.** A description earns its budget by carrying the nouns an agent routes on: the tool, the action, the object, the when. Compaction trims grammar, never trigger nouns.
@@ -44,13 +45,16 @@ Every `SKILL.md` description sits in Hermes's Level-0 metadata — always loaded
 
    Anything over ~200 is a compaction candidate.
 
-2. **Check name/dir drift.**
+2. **Check name/dir drift + spec conformance.**
 
    ```bash
    for f in skills/*/SKILL.md souls/*/SKILL.md; do
      dir=$(basename "$(dirname "$f")")
      name=$(sed -n 's/^name: *//p' "$f" | head -1)
+     desc=$(sed -n 's/^description: *//p' "$f" | head -1)
      [ "$dir" != "$name" ] && echo "DRIFT: $f (name=$name dir=$dir)"
+     [ -z "$desc" ] && echo "SPEC: $f missing description — invisible to discovery"
+     printf '%s' "$name" | grep -Eq '^[a-z0-9-]+$' || echo "SPEC: $f name '$name' not lowercase-hyphen — won't route"
    done
    ```
 
@@ -99,6 +103,7 @@ Over budget (>200 chars):
 Duplicates:     [pairs, or "none — analogs are intentional"]
 Orphans:        [skills with 0 external refs, or "none"]
 Name/dir drift: [mismatches, or "none"]
+Spec issues:    [missing description / malformed name, or "none"]
 Runtime fit:    [skills the target runtime can't run, or "n/a — auditing the library itself"]
 Host overlap:   [styx↔host duplicate pairs + which to prefer, or "none"]
 

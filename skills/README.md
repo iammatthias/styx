@@ -30,6 +30,9 @@ Multi-step procedures any soul can invoke. Following [agentskills.io](https://ag
 | [`/wrangler`](./wrangler) | Deploy Cloudflare Workers, tail logs, manage KV/R2/D1. |
 | [`/cache-audit`](./cache-audit) | Find and fix broken prompt caching in a harness/SDK, then prove the hit on the wire. |
 | [`/handoff`](./handoff) | Pack work to hand across a session, soul, agent, or person. |
+| [`/plan`](./plan) | Turn a multi-step change into bite-sized, fully-specified tasks; execute with verification and hard stops. |
+| [`/worktrees`](./worktrees) | Isolate a branch in its own git worktree for parallel or risky work. |
+| [`/document`](./document) | Produce or edit real office files — .docx, .pptx, .xlsx, .pdf. |
 
 ## Souls vs. skills
 

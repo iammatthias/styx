@@ -24,7 +24,7 @@ This is the `/voice-check` of design — a mechanical pass for the tells that sc
 
 ## What it checks
 
-Reads the seed tells list in `souls/designer/MEMORY.md` plus any live additions in memory under `designer:tells`. Then scans, by domain:
+Reads the seed tells list in `souls/designer/MEMORY.md` (grouped by domain — type, color, shadow, layout, motion, space, copy) plus any live additions in memory under `designer:tells`. Then scans, by domain:
 
 - **Type** — Inter / Arial / system stack for *everything*; no pairing; one weight doing every job; mono (JetBrains Mono et al.) on body/UI copy to fake "technical"; line length past ~75ch; cramped line-height on body; skipped heading levels.
 - **Color** — purple→blue gradients; pure black (`#000`) text or background; untinted grays; gray text on a colored fill; an accent used on everything so nothing stands out.

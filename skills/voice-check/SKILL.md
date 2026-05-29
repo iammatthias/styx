@@ -22,7 +22,10 @@ Reads the seed banned-phrases list in `souls/writer/MEMORY.md` (grouped by tell 
 - **Structural clichés** — the sentence-shape tells AI prose reaches for:
   - *Binary contrast* — "Not because X. Because Y.", "The answer isn't X. It's Y." Telegraphs the conclusion before stating it.
   - *Inflate-by-negation* — "more than just X", "not just a refactor, a rethink." States significance by negating a strawman.
+  - *"X is the Y of Z"* — "Cringe is the visible signature of moving along a gradient you chose." Forced analogy-as-definition; sounds profound, asserts nothing checkable.
+  - *Punchline density* — every sentence landing as a quotable aphorism ("Symmetry becomes a trap.", "The Tiger fit the story."). One mic-drop is a flourish; a paragraph of them is a tell.
   - *Negative listing* — "Not a X. Not a Y. A Z." Drama by accumulated negation.
+  - *Consecutive short sentences* — staccato runs of fragments for gravitas: "It had no preference for symmetry. No aesthetic prior. No instinct to preserve harmony." Vary the length or cut.
   - *Dramatic fragmentation* — "X. That's it.", "X. And Y. And Z." Fragments for fake emphasis.
   - *Setup-payoff restatement* — a full sentence then a fragment that just restates it: "The results were clear. Crystal clear."
   - *Rhetorical setup* — "What if [reframe]?", "Here's what I mean:", "Think about it:" Announcing an insight instead of delivering it.

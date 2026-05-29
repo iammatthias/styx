@@ -9,6 +9,7 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 <!-- The slop patterns /taste scans for. This is the design analog of writer's banned-words list. Refresh as AI defaults shift. -->
 
 - Inter (or Arial / system stack) for everything, no pairing
+- JetBrains Mono (or any mono) used for body/UI copy to signal "technical," not just code
 - purple→blue gradient (`#7c3aed → #2563eb` and its cousins)
 - pure black (`#000`) text or background, never tinted
 - untinted gray neutrals
@@ -25,6 +26,9 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 - `Lorem ipsum` shipped in
 - "Submit" / "Click here" button labels
 - blank empty states with no next action
+- numbered "step" lists + bullet stacks as the default page skeleton (the generated-landing-page shape)
+- pill/badge with a blinking status dot, used decoratively where nothing is live
+- the stock generated-component set: identical rounded feature cards, the same outline+fill button pair on every AI site
 
 ## Design tokens per context
 

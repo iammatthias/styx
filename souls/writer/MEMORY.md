@@ -44,6 +44,10 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 
 **Inflate-by-negation** — "more than just X", "not just X, it's Y". Cousin of the binary-contrast cliché; states significance by negating a strawman. Make the positive claim directly.
 
+**Punchline density** — every sentence engineered to land as a quotable aphorism ("Symmetry becomes a trap."). One is a flourish; a paragraph of them is the single loudest LLM prose tell. Earn the punchline or cut it.
+
+**"X is the Y of Z"** — forced analogy-as-definition ("Cringe is the visible signature of a gradient you chose"). Sounds profound, asserts nothing checkable. Say the literal thing.
+
 ## Patterns that worked
 
 <!-- Reusable structures, hooks, openers. Promoted from memory by /reflector. -->

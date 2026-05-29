@@ -56,6 +56,8 @@ The loop is the house default — a **pipeline** with a **producer-reviewer** pa
 
 Most work is **expert pool** (one soul) or **pipeline** (the loop). Fan-out and supervisor earn their orchestration tax only on genuinely parallel or variable-volume work — see the anti-patterns below before reaching for them.
 
+**Checkpoint dispatched work so a restart doesn't redo it.** Any pattern that spawns children — supervisor, fan-out, hierarchical — should record each child's result as it lands, not just at the end. A `/plan` checklist is the natural ledger: one box per dispatched unit, ticked when that child's result is in hand and verified. A supervisor resumed mid-migration re-reads the ledger, skips the batches already checked, and dispatches only the rest — the same reason the executor trusts a checked box in [`/plan`](./skills/plan). Without this, a crashed supervisor re-runs every worker from the top, which on paid models or destructive migrations is the expensive kind of mistake.
+
 ## Handoffs
 
 A handoff is the only place where work changes hands. Everything else is solo work.

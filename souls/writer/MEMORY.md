@@ -28,9 +28,25 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 
 **Filler adverbs** — really, just, literally, genuinely, honestly, simply, actually, truly, fundamentally, inherently, inevitably, crucially, importantly. (Cut, don't soften.)
 
+**Weak intensifiers + soft verbs** — quite, rather, fairly, somewhat, arguably; "can be", "tends to", "often". Soften every claim until it says nothing. State it or cut it.
+
 **Meta-commentary** — "Hint:", "Plot twist:", "Spoiler:", "You already know this, but", "Let me walk you through", "In this section we'll", "As we'll see", "I want to explore".
 
 **Vague declaratives** — "The implications are significant", "The stakes are high", "The reasons are structural", "This is the deepest problem", "the consequences are real". (Show the specific, or cut.)
+
+**Vague attribution** — "experts say", "studies show", "research shows", "it's widely known", "many would argue". Name the source and date, or cut the claim.
+
+**Transitions + signposting** — Moreover, Furthermore, Additionally, In addition; reflexive "First… Next… Finally…" roadmaps on a piece short enough that the headings already show the shape.
+
+**Conclusion padding** — "In conclusion", "Overall", "At the end of the day", "All in all", "X is a powerful tool that can help you achieve your goals". Say the actual takeaway or stop.
+
+**Sycophancy** — "Great question!", "What a fascinating topic", "I'd be happy to help", "You're absolutely right". Just answer.
+
+**Inflate-by-negation** — "more than just X", "not just X, it's Y". Cousin of the binary-contrast cliché; states significance by negating a strawman. Make the positive claim directly.
+
+**Punchline density** — every sentence engineered to land as a quotable aphorism ("Symmetry becomes a trap."). One is a flourish; a paragraph of them is the single loudest LLM prose tell. Earn the punchline or cut it.
+
+**"X is the Y of Z"** — forced analogy-as-definition ("Cringe is the visible signature of a gradient you chose"). Sounds profound, asserts nothing checkable. Say the literal thing.
 
 ## Patterns that worked
 

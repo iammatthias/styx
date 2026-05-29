@@ -24,12 +24,12 @@ This is the `/voice-check` of design — a mechanical pass for the tells that sc
 
 ## What it checks
 
-Reads the seed tells list in `souls/designer/MEMORY.md` plus any live additions in memory under `designer:tells`. Then scans, by domain:
+Reads the seed tells list in `souls/designer/MEMORY.md` (grouped by domain — type, color, shadow, layout, motion, space, copy) plus any live additions in memory under `designer:tells`. Then scans, by domain:
 
-- **Type** — Inter / Arial / system stack for *everything*; no pairing; one weight doing every job; line length past ~75ch; cramped line-height on body; skipped heading levels.
+- **Type** — Inter / Arial / system stack for *everything*; no pairing; one weight doing every job; mono (JetBrains Mono et al.) on body/UI copy to fake "technical"; line length past ~75ch; cramped line-height on body; skipped heading levels.
 - **Color** — purple→blue gradients; pure black (`#000`) text or background; untinted grays; gray text on a colored fill; an accent used on everything so nothing stands out.
 - **Shadow** — the default `box-shadow` glow on every card; dark glows; one elevation for everything; shadow used where proximity would do.
-- **Layout** — cards nested in cards; *everything* wrapped in a card; centered-everything with no real hierarchy; borders doing a job whitespace should.
+- **Layout** — cards nested in cards; *everything* wrapped in a card; the generated-landing-page skeleton (numbered "step" lists + bullet stacks, identical rounded feature cards, the same outline+fill button pair); decorative blinking-dot status badges where nothing is live; centered-everything with no real hierarchy; borders doing a job whitespace should.
 - **Motion** — bounce / elastic easing (dated); no `prefers-reduced-motion` path; default 150ms-on-everything; motion with no purpose.
 - **Space** — values not on a scale (13px, 27px); cramped padding; touch targets under 44px.
 - **Copy** — `Lorem ipsum` left in; "Submit" / "Click here" labels; empty states that are just blank; error text that blames the user.

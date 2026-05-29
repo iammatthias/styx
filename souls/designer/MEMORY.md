@@ -6,25 +6,21 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 
 ## Tells in current rotation
 
-<!-- The slop patterns /taste scans for. This is the design analog of writer's banned-words list. Refresh as AI defaults shift. -->
+<!-- The slop patterns /taste scans for, grouped by the same domains as the skill. This is the design analog of writer's banned-words list. Refresh as AI defaults shift. -->
 
-- Inter (or Arial / system stack) for everything, no pairing
-- purple→blue gradient (`#7c3aed → #2563eb` and its cousins)
-- pure black (`#000`) text or background, never tinted
-- untinted gray neutrals
-- gray text on a colored fill (fails contrast, reads cheap)
-- the default `box-shadow` glow on every card
-- dark glows / neon shadows
-- cards nested inside cards
-- everything wrapped in a card
-- centered-everything with no real hierarchy
-- bounce / elastic easing (dated)
-- motion with no `prefers-reduced-motion` path
-- spacing values off any scale (13px, 27px)
-- touch targets under 44px
-- `Lorem ipsum` shipped in
-- "Submit" / "Click here" button labels
-- blank empty states with no next action
+**Type** — Inter / Arial / system stack for everything, no pairing; one weight doing every job; mono (JetBrains Mono et al.) on body/UI copy to fake "technical"; line length past ~75ch; cramped body line-height.
+
+**Color** — purple→blue gradient (`#7c3aed → #2563eb` and cousins); pure black (`#000`) text or background, never tinted; untinted gray neutrals; gray text on a colored fill (fails contrast, reads cheap); one accent on everything so nothing stands out.
+
+**Shadow** — the default `box-shadow` glow on every card; dark glows / neon shadows; one elevation for everything; shadow where proximity would group it.
+
+**Layout** — cards nested inside cards; everything wrapped in a card; the generated-landing-page skeleton (numbered "step" lists + bullet stacks, identical rounded feature cards, the same outline+fill button pair); decorative blinking-dot status badges where nothing is live; centered-everything with no real hierarchy; borders doing a job whitespace should.
+
+**Motion** — bounce / elastic easing (dated); no `prefers-reduced-motion` path; 150ms-on-everything; motion with no purpose.
+
+**Space** — values off any scale (13px, 27px); cramped padding; touch targets under 44px.
+
+**Copy** — `Lorem ipsum` shipped in; "Submit" / "Click here" labels; blank empty states with no next action; error text that blames the user.
 
 ## Design tokens per context
 

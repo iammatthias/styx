@@ -32,6 +32,7 @@ Multi-step procedures any soul can invoke. Following [agentskills.io](https://ag
 | [`/handoff`](./handoff) | Pack work to hand across a session, soul, agent, or person. |
 | [`/plan`](./plan) | Turn a multi-step change into bite-sized, fully-specified tasks; execute with verification and hard stops. |
 | [`/worktrees`](./worktrees) | Isolate a branch in its own git worktree for parallel or risky work. |
+| [`/stack`](./stack) | Ship squash-safe stacked PRs — retarget children before a parent merges so they survive. |
 | [`/document`](./document) | Produce or edit real office files — .docx, .pptx, .xlsx, .pdf. |
 
 ## Souls vs. skills

@@ -32,7 +32,7 @@ doesn't just disable styx, it crashes Hermes config loading and takes the whole
 agent down. Souls and skills are linked (a dangling skill link just fails to
 load, which is harmless). If anything breaks, `./install.sh doctor` repairs it.
 
-You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-seven skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/cache-audit`, `/handoff`, `/plan`, `/worktrees`, `/document`), and the base soul active by default.
+You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-eight skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/cache-audit`, `/handoff`, `/plan`, `/worktrees`, `/stack`, `/document`), and the base soul active by default.
 
 Optional [Claude Code hooks](./hooks) wire two of styx's ideas into the harness — a SessionStart that surfaces the last `/handoff`, and a PreToolUse guard that enforces the base soul's "careful" primitive. Install them with `./install.sh hooks`. Hermes doesn't need them; `HEARTBEAT.md` and the safety primitives cover the same ground.
 
@@ -98,6 +98,7 @@ styx/
 │   ├── handoff/            # pack work across a boundary
 │   ├── plan/               # bite-sized task plan + checkpointed execution
 │   ├── worktrees/          # isolate a branch in its own git worktree
+│   ├── stack/              # squash-safe stacked PRs
 │   ├── document/           # produce/edit .docx/.pptx/.xlsx/.pdf
 │   └── _template/
 └── hooks/                  # optional Claude Code hooks (SessionStart, PreToolUse guard)

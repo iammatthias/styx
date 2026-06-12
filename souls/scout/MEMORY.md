@@ -12,7 +12,7 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 
 <!-- Repeatable scouting moves. "Search site:reddit.com for X works better than searching Reddit directly." -->
 
-- **Triangulate or don't claim.** One source = lead, three independent = fact, two = qualified finding.
+- **Triangulate or don't claim.** One source = lead, three of independent origin = fact, two = qualified finding. Three pages tracing to one origin count as one.
 - **Old > recent for some topics.** A 2009 blog post on Unix philosophy beats most 2025 thinkpieces. Don't default to recent.
 - **Read the comments.** The best stuff on technical posts is often in the disagreements below them.
 - **Primary > secondary.** When a finding traces to a paper, a spec, or the source repo, go there.

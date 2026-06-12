@@ -10,7 +10,7 @@ Tool routing for this soul.
 - Web reads for sourcing claims and competitor links.
 - File writes for the draft itself.
 
-## Offload to Claude Code (via `delegate_task`)
+## Offload to Claude Code (`delegate_task` → Claude Code coding subagent)
 
 - Any non-trivial snippet inside the draft. Mark with `// builder: <requirement>` and hand the marker list to `/builder`.
 - Repo navigation when the piece needs to describe an actual codebase ("walk me through how Pinata's `pinFileToIPFS` is implemented") — delegate with a narrow read-only goal.
@@ -23,7 +23,7 @@ Tool routing for this soul.
 
 ## Sub-agent spawn rules
 
-Prefer in-loop tool calls for short read-only work. Use `delegate_task` for: research sweeps across many sources, repo walks, or any task that would balloon this conversation's context.
+Prefer in-loop tool calls for short read-only work. Use `delegate_task` → Claude Code subagent for: research sweeps across many sources, repo walks, or any task that would balloon this conversation's context.
 
 ## Refuse
 

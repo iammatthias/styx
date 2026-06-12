@@ -1,11 +1,11 @@
 ---
 name: image-gen
-description: Generates or edits images via an image API (OpenAI Images or Gemini/Nano Banana). Draft → iterate → final, with prompt templates and edit-only discipline. For /designer and /writer visuals.
+description: Generates or edits images via whatever image API is configured. Draft → iterate → final, with prompt templates and edit-only discipline. For /designer and /writer visuals.
 ---
 
 # /image-gen
 
-Generate or edit images through whatever image API is configured — OpenAI Images (`gpt-image`) or Google's Gemini / Nano Banana. The discipline is the same regardless of model: iterate cheap, lock the prompt, then render final. `/designer` uses it for visuals; `/writer` for post and doc imagery.
+Generate or edit images through whatever image model is configured (OpenAI Images, Gemini, or another). The discipline is the same regardless of model: iterate cheap, lock the prompt, then render final. `/designer` uses it for visuals; `/writer` for post and doc imagery.
 
 ## When to use
 
@@ -26,11 +26,11 @@ An API key in the environment (`OPENAI_API_KEY` or `GEMINI_API_KEY`) and whateve
 
 Don't burn time rendering 4K before the prompt is right.
 
-1. **Draft** at low res (~1K) for a fast feedback loop.
+1. **Draft** at a low working resolution for a fast, cheap feedback loop.
 2. **Iterate** — adjust the prompt in small diffs, one change at a time. When *editing*, keep the same input image every iteration until you're happy.
-3. **Final** — render high res (2K/4K) only once the prompt is locked.
+3. **Final** — render at the high/target resolution only once the prompt is locked.
 
-Map vague requests to resolution: no mention → 1K · "thumbnail/tiny" → 512 · "normal/medium" → 2K · "hi-res/ultra/4K" → 4K.
+Higher resolution costs more and renders slower, so iterate at low res and finalize high. Map vague requests sensibly: no mention → a low working res; "thumbnail/tiny" → smallest; "normal/medium" → mid; "hi-res/ultra/4K" → the model's top tier. Use whatever resolutions the configured model actually supports.
 
 ## Prompt templates
 
@@ -54,7 +54,7 @@ The saved file path, the model and resolution used, and the final prompt. **Don'
 
 ## Refusals
 
-- Don't render 4K until the prompt is locked. Iterate at 1K.
+- Don't render at the high/target resolution until the prompt is locked. Iterate low.
 - Don't change more than the user asked when editing. One diff at a time, everything else identical.
 - Don't put the API key on the command line.
 - Don't generate images of real, identifiable people in compromising or deceptive contexts.

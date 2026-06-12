@@ -14,6 +14,12 @@ Two models. Same prompt. Compare.
 - On a piece you're proud of but suspicious of.
 - When you and the primary model agree and you can't tell if that's signal or echo.
 
+## When NOT to use
+
+- When the stakes don't warrant a second model — a reversible, low-cost call. Just decide.
+- To break a tie on a question you haven't sharpened yet → sharpen it first, then maybe ask.
+- As a substitute for doing the thinking. A second opinion checks judgment; it doesn't replace it.
+
 ## Modes
 
 **review** — pass/fail gate. Hand the artifact, ask "ship or not?", get a yes/no with reasons.
@@ -26,7 +32,7 @@ Two models. Same prompt. Compare.
 
 1. **Pick the mode.**
 2. **Bundle context.** Subagents have no parent history. Pass the brief, the artifact, the question, the constraints — everything the second model needs to judge fairly.
-3. **Invoke the other model** via `delegate_task` with the right system prompt (review / challenge / consultation).
+3. **Invoke the other model** via `delegate_task` with the right system prompt (review / challenge / consultation). If `delegate_task` or the other model isn't reachable, say so and fall back to a single-model self-review pass in the chosen mode — label it as such so the user knows it's one model, not two.
 4. **Compare.**
    - Overlap = high confidence. Both flagged X → X is real.
    - Divergence = a question to resolve, not a tiebreaker. Don't average.

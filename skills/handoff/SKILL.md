@@ -34,7 +34,7 @@ Work that crosses a boundary loses context unless you pack it. A new session wak
    **If a [`/plan`](../plan) is driving the work, point at it instead of re-listing tasks.** The plan file is the durable checkpoint store — its checked boxes *are* the progress record. Set `Done` to "tasks 1–K checkpointed in `<plan path>`" and `Next` to the first unchecked task. Copying task state into the save just gives the receiver two ledgers to reconcile, and they'll drift.
 3. **Tag with `[[wikilinks]]`** to the briefs, drafts, or souls involved, so memory's graph and `/reflector` can find it later.
 4. **Write it where the receiver will look.** memory `context-save:<slug>` for a future session; the `delegate_task` prompt for a subagent; a message or doc for a person. For a future session, also drop the save as `$STYX_HANDOFF_DIR/<slug>.md` (default `~/.hermes/handoffs/`) — the SessionStart hook in [`hooks/`](../../hooks) surfaces the newest one automatically so the next session offers to restore it without being asked.
-5. **Tell the user the slug** so they can resume with `/context-restore <slug>` (or just by reminding you).
+5. **Tell the user the slug** so they can resume by pointing you at it — the SessionStart hook surfaces the newest `context-save:` breadcrumb on the next boot, and naming the slug pins which one.
 
 ## Output
 

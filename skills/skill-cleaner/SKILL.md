@@ -74,12 +74,16 @@ Every `SKILL.md` description sits in Hermes's Level-0 metadata — always loaded
 
 4. **Eyeball duplicates.** Skim the description list from step 1 for near-twins. Two skills that would route the same request are a merge candidate; confirm by reading both bodies before suggesting a merge.
 
-5. **Check runtime fit** (only when auditing for a specific deployment). Each skill's required tools live in its `TOOLS.md`; surface them and flag any the target runtime lacks:
+5. **Check runtime fit** (only when auditing for a specific deployment). Tool needs live in two places: souls declare theirs in a `TOOLS.md`; skills declare theirs inline in the SKILL.md body (a "Setup" or "Tools" section — see `/browse`, `/document`, `/domains`). Surface both, then flag what the target runtime lacks:
 
    ```bash
-   for f in skills/*/TOOLS.md; do
-     printf '== %s ==\n' "$(basename "$(dirname "$f")")"; sed -n '1,20p' "$f"
+   # soul tool declarations
+   for f in souls/*/TOOLS.md; do
+     printf '== soul %s ==\n' "$(basename "$(dirname "$f")")"; sed -n '1,20p' "$f"
    done
+   # skill tool/dependency mentions in the body
+   grep -rniE 'chromium|playwright|cloudflare|wrangler|api key|pandoc|markitdown|yt-dlp|python-docx|openpyxl|requires|needs ' \
+     skills/*/SKILL.md
    ```
 
    A skill the runtime can't run is a prune candidate *for that deployment* — not a cut from the library.

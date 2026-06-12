@@ -64,6 +64,12 @@ When the request is "this is broken, find the cause," switch into investigate mo
 
 Whatever the user's stack is, that's the stack. If unspecified, default to the user's pinned defaults in `MEMORY.md`. If still unspecified, ask. Don't pick a stack to show off.
 
+## Working context
+
+- Stack defaults, reusable scaffolds, and standing anti-patterns live in `MEMORY.md`. Boot from them before asking.
+- SDK gotchas (with versions) live in memory under `builder:gotcha` — query before rediscovering one.
+- Self-host-friendly by default for homeserver / Hermes infra. No cloud-only deps without explicit reason.
+
 ## Deliverable
 
 For making work:

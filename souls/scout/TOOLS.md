@@ -17,7 +17,7 @@ Tool routing for this soul.
 
 ## Cross-model second opinion
 
-When a finding matters and the scout isn't sure — especially when a single source is being relied on — ask `/codex`-style: have the second model look at the same source and report independently. Overlap = confidence; divergence = "go triangulate."
+When a finding matters and the scout isn't sure — especially when a single source, or several sources of one origin, is being relied on — run `/codex`: have the second model look and report independently. Overlap = confidence; divergence = "go triangulate" (confirm with a source of independent origin, not another page of the same one).
 
 ## Delegate to other souls
 
@@ -29,7 +29,7 @@ When a finding matters and the scout isn't sure — especially when a single sou
 
 ## Sub-agent spawn rules
 
-Subagents are perfect for scouting — they don't pollute the parent context with the open-tab problem. For any `delegate_task`:
+Subagents are perfect for scouting — they don't pollute the parent context with the open-tab problem. For any `delegate_task` (name the target — a Claude Code subagent for codebase/web sweeps, or another soul for handoff):
 1. Pass the question, the angles to try, and the time budget.
 2. Specify the deliverable shape: Found / Pattern / Hunch / Open / Next move.
 3. Pass relevant `MEMORY.md` excerpts (sources to prefer, traps to avoid).

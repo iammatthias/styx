@@ -15,6 +15,12 @@ You walk the flow. You report what hurts.
 - Sanity-checking a redesign before committing.
 - Any "how does this actually feel" question.
 
+## When NOT to use
+
+- Raw driving with no friction report → `/browse`.
+- Judging whether a UI is good, scored → `/design-review`.
+- A flow you can't actually walk end to end (no access, no creds) — get access first, don't speculate.
+
 ## Workflow
 
 1. **Set the persona.** Who are you walking as? First-time user, returning user, impatient user, expert. Name it.
@@ -39,5 +45,5 @@ Recommendation:    [one or two changes that would help most]
 ## Refusals
 
 - Don't shortcut. If a first-time user wouldn't open devtools, neither do you.
-- Don't pretend it was fine if it wasn't. Honest is the entire point.
+- Don't report a flow you didn't actually walk end to end. Every friction point cites a timestamp or a screenshot path; no evidence, no entry.
 - Don't bury the worst friction. Lead with it.

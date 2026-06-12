@@ -19,7 +19,7 @@ Hermes doesn't use these — it gets the same behavior from each soul's `HEARTBE
 ./install.sh hooks          # merge into ~/.claude/settings.json (backs up first)
 ```
 
-Idempotent — re-running replaces styx's entries without touching your other hooks. The merge substitutes the absolute checkout path into `hooks.json`, so it survives a `git pull` but not a move (re-run after moving the checkout).
+Idempotent — re-running replaces styx's entries without touching your other hooks. The merge substitutes the absolute checkout path into `hooks.json`, but detects its own entries by the hook-script path (`…/hooks/session-start.sh`, `…/hooks/pre-tool-guard.sh`), not the full checkout path. So a re-run survives a `git pull` and, after moving the checkout, cleans up the stale entry too (re-run once after the move).
 
 To remove them, delete the styx `SessionStart`/`PreToolUse` command entries from `~/.claude/settings.json`, or restore the timestamped backup the installer wrote next to it.
 

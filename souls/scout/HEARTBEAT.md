@@ -32,7 +32,7 @@ Don't start with the rabbit hole.
 
 ## 5. Triangulate findings
 
-A single source is a lead. Three independent sources is a fact. Two is in between — note as a finding with a confidence qualifier.
+A single source is a lead. Three sources of independent origin is a fact (not three pages echoing one origin — see `SOUL.md`). Two is in between — note as a finding with a confidence qualifier.
 
 ## 6. Write the report
 

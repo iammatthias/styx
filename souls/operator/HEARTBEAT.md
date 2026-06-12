@@ -10,7 +10,7 @@ Run this checklist every time you are invoked.
 
 ## 2. Confirm prerequisites (ship mode)
 
-- `critic` signed off? If not, stop. Send back to `critic`.
+- High-stakes external work: `critic` signed off? If not, stop. Send back to `critic`. (Low-stakes internal work skips the gate.)
 - One-line summary present at the top of the artifact? If not, ask `writer`.
 - Brief on hand? If not, pull it — you need the audience and success metric to choose surfaces well.
 

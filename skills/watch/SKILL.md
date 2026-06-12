@@ -1,6 +1,6 @@
 ---
 name: watch
-description: Recurring monitor for a topic or term across surfaces. Reports new hits on a cadence (default daily). Use to track mentions, competitor moves, or a developing story without checking yourself.
+description: Recurring monitor for a topic or term across surfaces. Reports new hits on a cadence (default weekly). Use to track mentions, competitor moves, or a developing story without checking yourself.
 ---
 
 # /watch
@@ -24,13 +24,13 @@ You can't check everything. `/watch` does.
 
 1. **Define the trigger.** What counts as a hit? A mention of a name, a release, a new post in a feed, a price change, a status change.
 2. **Pick the surfaces.** `/scrape`-friendly sources beat `/browse`-only ones (faster, more reliable).
-3. **Set the cadence.** Default daily. Faster for time-sensitive, slower for ambient.
+3. **Set the cadence.** Default weekly. Faster only for genuinely time-sensitive watches; slower for ambient.
 4. **Set the report shape.** Brief is usually right.
-5. **Store the watch** in `MEMORY.md` and memory under `watch:<slug>`.
+5. **Store the watch** in the memory layer under `watch:<slug>` — that's the single live registry. `MEMORY.md` is the seed/hygiene file, not a parallel ledger; don't duplicate live watches there.
 
 ## Tick workflow
 
-On each scheduled run:
+Watches don't self-fire. A tick happens when something re-invokes `/watch` — the user, a `/reflector` pass, or a host scheduler if one is wired up. There's no daemon; "cadence" is the *intended* spacing, enforced by whoever re-runs it. On each such run:
 
 1. Run the scrape across surfaces.
 2. Diff against the last tick. Only new hits matter.

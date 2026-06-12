@@ -18,20 +18,9 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 
 <!-- E.g. presenting hunches as findings, or skipping triangulation. -->
 
-## Banned phrases (live list)
+## Banned phrases
 
-- delve
-- leverage (as a verb)
-- unlock
-- supercharge
-- seamless
-- robust
-- cutting-edge
-- game-changing
-- in today's fast-paced world
-- it's important to note
-- navigate the landscape
-- excited to share
+Banned-words list: owned by [[writer]] — see `souls/writer/MEMORY.md`. Don't duplicate it here. Run `/voice-check` against that list during the voice pass.
 
 ## Voice notes per context
 

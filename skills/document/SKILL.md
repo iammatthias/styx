@@ -28,9 +28,9 @@ Prefer the format-native Python library — it round-trips structure and styling
 | `.docx` | `python-docx` | `pandoc in.md -o out.docx` |
 | `.pptx` | `python-pptx` | — |
 | `.xlsx` | `openpyxl` | — |
-| `.pdf`  | `pandoc` (via LaTeX) or `reportlab` | `pandoc in.md -o out.pdf` |
+| `.pdf`  | `pandoc` (via a TeX engine) or `reportlab` | `pandoc in.md -o out.pdf` |
 
-Check availability first (`python3 -c "import docx"`, `pandoc --version`); install only what the task needs and tell the user what you added.
+Check availability first (`python3 -c "import docx"`, `pandoc --version`); install only what the task needs and tell the user what you added. For PDF via pandoc, also confirm a TeX engine is present (`pdflatex --version` / `xelatex --version` / `tectonic --version`) — pandoc passes through to it and a missing engine fails the render even though `pandoc --version` passes. No engine available → fall back to `reportlab` (build the PDF directly) rather than promising a path that errors.
 
 ## Workflow
 

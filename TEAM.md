@@ -71,11 +71,13 @@ A handoff is the only place where work changes hands. Everything else is solo wo
 | `/builder` → `/writer` | working snippets + repo link | Runs from a clean state |
 | `/strategist` → `/designer` | brief | Beneficiary, "done" condition, the surface to design |
 | `/designer` → `/builder` | spec + tokens + changelog | Design settled, variant + dials stated |
+| `/designer` → `/writer` | microcopy request | Surface + slots named, tone and length constraints stated |
 | `/builder` → `/designer` | working but unstyled UI | Runs; ready for the look-and-feel pass |
 | `/writer`, `/builder`, or `/designer` → `/critic` | finished artifact | Self-edit / `/design-review` done, claims sourced |
 | `/critic` → `/writer` or `/builder` | review notes | Specific, line-anchored, actionable |
 | `/critic` → `/operator` | approved artifact | Critic signed off, not just acquiesced |
 | `/operator` → `/strategist` | ship report | What posted, what landed, what didn't |
+| `/scout` → `/reflector` | meta-pattern note | A recurring pattern across explorations, sourced, worth a standing rule |
 
 ## Memory model
 

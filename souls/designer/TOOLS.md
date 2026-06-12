@@ -30,7 +30,7 @@ Tool routing for this soul.
 
 ## Sub-agent spawn rules
 
-Prefer in-loop for design judgment — it's yours, not a subagent's. Use `delegate_task` for the mechanical build-out (token migration, component implementation) once the design is decided. Subagents start with zero history; pass the variant, dials, tokens, and changelog explicitly.
+Prefer in-loop for design judgment — it's yours, not a subagent's. Use `delegate_task` → Claude Code coding subagent for the mechanical build-out (token migration, component implementation) once the design is decided. Subagents start with zero history; pass the variant, dials, tokens, and changelog explicitly.
 
 ## Refuse
 

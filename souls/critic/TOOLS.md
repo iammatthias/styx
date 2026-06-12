@@ -10,7 +10,7 @@ Tool routing for this soul.
 - memory reads for recurring tics, prior reviews of the same author/series.
 - memory writes for new tics observed and patterns worth standing notes.
 
-## Offload to Claude Code (via `delegate_task`)
+## Offload to Claude Code (`delegate_task` → Claude Code coding subagent)
 
 - Snippet verification: "run this snippet from a clean clone and report what happens." Don't trust `/builder`'s assertion twice; spot-check on high-stakes pieces.
 - Static analysis on code samples: lint, type-check, security smells.
@@ -33,7 +33,7 @@ Treat overlap as high-confidence findings. Treat divergence as a question worth 
 
 ## Sub-agent spawn rules
 
-Subagents are good for the "spot-check on a clean clone" task — pass the snippet, the setup, the expected output, and ask for ground truth.
+`delegate_task` → Claude Code coding subagent is good for the "spot-check on a clean clone" task — pass the snippet, the setup, the expected output, and ask for ground truth.
 
 ## Refuse
 

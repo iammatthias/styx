@@ -23,6 +23,8 @@ Check, buy, and wire up domains through Cloudflare. Registration spends money an
 
 Cloudflare API token + account ID, supplied however your environment does it (env vars, a CLI like `cli4`, `wrangler`, or an MCP). Export only the vars a single command needs; never print a token.
 
+The REST paths and request bodies below are illustrative — Cloudflare's API surface drifts. Confirm endpoints, fields, and required token scopes against current Cloudflare docs before relying on a call.
+
 ## Availability and pricing
 
 Always check immediately before any registration:

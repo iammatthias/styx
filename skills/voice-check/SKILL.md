@@ -14,6 +14,12 @@ Ten seconds before `/critic`. Catches the mechanical stuff so the smart review c
 - On anything that might have AI-tells (AI-edited, AI-generated, or just a long day).
 - On copy from other people you're going to ship under your name.
 
+## When NOT to use
+
+- Judging whether the writing is actually good → `/critic`. This is mechanical hits only.
+- Fixing the hits → `/writer`. This surfaces; it doesn't edit.
+- Auditing a UI instead of prose → `/taste`.
+
 ## What it checks
 
 Reads the seed banned-phrases list in `souls/writer/MEMORY.md` (grouped by tell — marketing-ese, throat-clearing, emphasis crutches, jargon, filler adverbs, weak intensifiers, meta-commentary, vague declaratives, vague attribution, transitions/signposting, conclusion padding, sycophancy, inflate-by-negation) plus any live additions in memory under `writer:banned`. Then scans for those, and for the structural and formatting tells below:
@@ -60,7 +66,7 @@ hits:
 severity: [low | medium | high]
 ```
 
-Severity is **high** if any banned phrase is present, **medium** if structural clichés, formatting tells, em-dash overuse, or passive voice show up in three or more places, **low** otherwise.
+A lone banned phrase is a hit to fix, not an automatic verdict. Severity reflects density: **high** when the tells stack — multiple banned phrases, or structural/formatting tells plus banned phrases together, enough that the draft reads as drifted. **medium** when structural clichés, formatting tells, em-dash overuse, or passive voice show up in three or more places, or one banned phrase sits alone. **low** otherwise.
 
 ## Refusals
 

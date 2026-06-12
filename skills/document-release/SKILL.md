@@ -14,6 +14,12 @@ Code shipped. Now the docs have to catch up.
 - After a config change that affects setup.
 - After a public-facing rename or restructure.
 
+## When NOT to use
+
+- Mid-work, before anything has actually shipped. Wait until the change has landed; docs written against unmerged code go stale on the spot.
+- Announcing or launching the change → `/operator`. This catches up the docs; it doesn't market.
+- Drafting net-new prose from scratch → `/writer`.
+
 ## Workflow
 
 1. **Identify the change.** Read the diff or release notes. Know what shifted.

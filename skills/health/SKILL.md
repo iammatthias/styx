@@ -14,6 +14,12 @@ A two-minute read on a codebase before sinking hours into it.
 - Before recommending a tool you haven't used recently.
 - After a long absence from your own code.
 
+## When NOT to use
+
+- Auditing a UI rather than code → `/design-review`.
+- Reviewing a specific diff for correctness → `/critic`.
+- You can't run the checks (no clone, no creds) — get the repo first, don't score blind.
+
 ## What it checks
 
 - **Types** — typechecker clean? Configured strictly?
@@ -28,7 +34,7 @@ A two-minute read on a codebase before sinking hours into it.
 
 1. Clone fresh or pull latest.
 2. Run each dimension's check. Where there's no script, skim.
-3. Score 0-10. Be specific in your head about what 5 means; don't grade-inflate.
+3. Score 0-10, and write a one-line rationale next to each score. Anchor it: 5 means "works but has real problems you'd hit soon," 8 means "solid, minor gaps." Don't grade-inflate.
 4. Pick the three things that would move the score most.
 5. Write the report.
 

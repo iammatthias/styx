@@ -234,8 +234,9 @@ do_doctor() {
 
 # =============================================================================
 # Merge the styx Claude Code hooks into ~/.claude/settings.json. Idempotent:
-# drops any prior styx hook entries (matched by the checkout path) and re-adds
-# the current ones, leaving the user's other hooks untouched. Backs up first.
+# drops any prior styx hook entries (matched by the stable hook-script path,
+# so stale entries from a moved checkout are caught too) and re-adds the
+# current ones, leaving the user's other hooks untouched. Backs up first.
 do_hooks() {
   step "styx hooks → $CLAUDE_HOME/settings.json"
 
@@ -280,7 +281,14 @@ if os.path.exists(settings_path):
 hooks = settings.setdefault("hooks", {})
 
 def is_styx(group):
-    return any(styx in h.get("command", "") for h in group.get("hooks", []))
+    # Match on the stable hook-script suffix, not the absolute checkout path, so
+    # a moved-then-reinstalled checkout's stale entries (which still carry the
+    # old path) are recognized and replaced instead of left dangling.
+    markers = ("/hooks/session-start.sh", "/hooks/pre-tool-guard.sh")
+    return any(
+        any(h.get("command", "").endswith(m) for m in markers)
+        for h in group.get("hooks", [])
+    )
 
 for event, groups in incoming.items():
     existing = [g for g in hooks.get(event, []) if not is_styx(g)]

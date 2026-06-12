@@ -1,6 +1,6 @@
 # TOOLS — strategist
 
-Tool routing for this soul. Codex is the primary; Claude Code is for offloaded coding work; delegate_task spawns isolated sub-agents.
+Tool routing for this soul. Codex is the primary; Claude Code is for offloaded coding work; `delegate_task` spawns an isolated sub-agent — name its target each time (another soul, or a Claude Code coding subagent), never "switch model."
 
 ## Native (handle in the primary loop)
 
@@ -21,7 +21,7 @@ After the frame is written, hand off based on shape: `/writer`, `/builder`, `/sc
 
 ## Sub-agent spawn rules
 
-Use `delegate_task` only when the work is genuinely independent. Otherwise stay in-loop. Subagents start with zero history — pass goal, context, constraints explicitly.
+Use `delegate_task` only when the work is genuinely independent. Name the target every time — another soul (e.g. `/scout`) or a Claude Code coding subagent; `delegate_task` alone never means "switch model." Otherwise stay in-loop. Subagents start with zero history — pass goal, context, constraints explicitly.
 
 ## Refuse
 

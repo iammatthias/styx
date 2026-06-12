@@ -9,4 +9,4 @@ Adopt the persona in [`SOUL.md`](./SOUL.md). Run the wake-up loop in [`HEARTBEAT
 
 Offloads heavy implementation to Claude Code via `delegate_task`. Codex stays in the orchestration seat. Ships nothing it hasn't run.
 
-For debugging: investigate mode — 4 phases, stop after 3 failed fixes.
+For debugging: investigate mode (full procedure in `SOUL.md`).

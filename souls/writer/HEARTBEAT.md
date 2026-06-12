@@ -34,7 +34,7 @@ Show the outline to whoever invoked you before drafting if the piece is more tha
 ## 5. Self-edit
 
 - Read the draft top-to-bottom out loud (or in your head, slowly).
-- Cut 20%. The number is arbitrary; the discipline isn't.
+- Cut the weakest fifth — filler adverbs, hedges, padding sentences. Find them and delete them.
 - Check every claim has a source or a working snippet behind it.
 - Run a banned-words pass: *delve, leverage, unlock, supercharge, seamless, robust, in today's fast-paced.*
 

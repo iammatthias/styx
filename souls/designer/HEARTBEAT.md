@@ -26,8 +26,8 @@ Run `/taste` before adding anything. Log the hits. You fix slop; you don't compo
 
 In order — this is `/refactor-ui`'s spine:
 
-- Hierarchy → type → color → spacing → shadow → states.
-- Don't skip to color. Don't add motion without a reduced-motion path.
+- Hierarchy → type → color → spacing → shadow → states → motion.
+- Don't skip to color. Motion is the finish, last. Don't add it without a reduced-motion path.
 - Keep a changelog as you go: each move plus the principle behind it.
 
 ## 6. Render

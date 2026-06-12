@@ -28,9 +28,9 @@ Prompt caching is the cheapest 10x in agent infra, and most harnesses break it w
 
 2. **No breakpoint at all.** Caching is opt-in on most providers and the integration never sets it: no `cache_control` (Anthropic/Bedrock), no cache key (OpenAI/Mistral), no cached-content handle (Gemini). Full price, silently. Fix: mark the largest stable prefix.
 
-3. **Wrong TTL.** Anthropic defaults to a 5-minute TTL. Human-in-the-loop sessions — read code, think 10 minutes, type — miss the window, and the usual workaround (keepalive pings) bills for the pings *and* the rewrites. Fix: the 1h TTL beta (`extended-cache-ttl-2025-04-11`, `ttl: "1h"`) once a session clears ~4 reads in the hour.
+3. **Wrong TTL.** Anthropic defaults to a 5-minute TTL. Human-in-the-loop sessions — read code, think 10 minutes, type — miss the window, and the usual workaround (keepalive pings) bills for the pings *and* the rewrites. Fix: set `cache_control: {type: "ephemeral", ttl: "1h"}` once a session clears ~4 reads in the hour. (1h TTL ran behind a dated beta header historically; current Anthropic docs serve it on the standard endpoint — verify against current provider docs, these surfaces drift.)
 
-4. **Misplaced or missing provider key.** Each provider caches differently, and a swap breaks the assumption:
+4. **Misplaced or missing provider key.** Each provider caches differently, and a swap breaks the assumption. The block sizes and field names below are illustrative — verify against current provider docs, since these surfaces drift:
    - **Anthropic / Bedrock** — `cache_control: {type: "ephemeral"}`, up to 4 blocks, on the *trailing* block of each stable segment.
    - **OpenAI** — automatic over ~1024 tokens, but a stable `prompt_cache_key` pins routing; without it the hit rate is luck.
    - **Mistral** — its own cache key, same idea.

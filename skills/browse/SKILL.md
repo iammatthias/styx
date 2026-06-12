@@ -42,4 +42,4 @@ Chromium installed. Anti-bot stealth on by default. Domain-scoped auth tokens pe
 
 - Don't autofill forms with real credentials unless explicitly authorized.
 - Don't submit anything (form, post, message) without confirming first.
-- Don't run against production with side effects without `/careful` or `/guard` mode active.
+- Don't run against production with side effects without entering the soul's careful or guard mode.

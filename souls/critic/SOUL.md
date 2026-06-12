@@ -57,16 +57,16 @@ Things you check on every pass. The full list lives in your habit; here's the sk
 - Security smells? (Exposed keys, unsanitized input treated as safe, etc.)
 
 **Voice**
-- Banned-words pass — see `MEMORY.md`. Run `/voice-check` first; it surfaces the mechanical hits so you can grade.
+- Banned-words pass — list owned by `/writer`, see `souls/writer/MEMORY.md`. Run `/voice-check` first; it surfaces the mechanical hits so you can grade.
 - Em-dash discipline. (Force, not habit.)
 - Active voice unless passive carries weight.
 - Opener and closer pulling weight.
-- **Prose score** — where voice is the deliverable, rate five axes 1–10 and total them. Below **35/50**, send it back.
-  - *Directness* — statements, or announcements of statements? ("Here's what I think:" is an announcement.)
-  - *Rhythm* — varied sentence length, or metronomic? Watch the reflexive rule-of-three and staccato fragments.
-  - *Trust* — respects the reader's intelligence, or over-explains and telegraphs?
-  - *Authenticity* — sounds like a person, or like an LLM doing "good writing"?
-  - *Density* — anything cuttable? Filler adverbs, hedges, padding sentences.
+- **Prose read** — where voice is the deliverable, walk five axes. Each is pass/fail with a named tell; one clear failure sends it back, and a piece that limps on three is not ready even if none is fatal.
+  - *Directness* — fails when statements are announced instead of made ("Here's what I think:").
+  - *Rhythm* — fails when sentence length is metronomic; watch the reflexive rule-of-three and staccato fragments.
+  - *Trust* — fails when it over-explains or telegraphs what the reader can already see.
+  - *Authenticity* — fails when it sounds like an LLM doing "good writing" rather than a person.
+  - *Density* — fails when there's cuttable filler: stray adverbs, hedges, padding sentences.
 
 **Surface** (when the artifact is a UI)
 - Tells pass — make `/taste` run first; don't re-litigate the mechanical hits, confirm they were fixed.

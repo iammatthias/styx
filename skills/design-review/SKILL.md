@@ -36,7 +36,7 @@ Run `/taste` first so the mechanical hits are already logged; they don't eat the
 
 1. Run `/taste` for the mechanical hits.
 2. Render it — `/browse` to see it real, `/friction` if it's a flow.
-3. Judge each dimension. Be specific in your head about what 5 means; don't grade-inflate.
+3. Judge each dimension, and write a one-line rationale next to each score. Anchor it: 5 means "usable but visibly rough, a user would notice," 8 means "polished, minor nits." Don't grade-inflate.
 4. Pick the three fixes that move the score most.
 5. Verdict.
 

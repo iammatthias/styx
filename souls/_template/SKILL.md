@@ -1,6 +1,6 @@
 ---
 name: <directory-name>
-description: <One sentence, third person. What it does + when to use it. This gets injected into Hermes's Level-0 metadata list, so write it the way you'd want the agent to read when deciding whether to load you. Max ~200 chars.>
+description: <One sentence, third person: what it does + when to use it. Injected into Hermes's Level-0 metadata list — write it for the agent deciding whether to load you. Max ~200 chars.>
 ---
 
 # /<directory-name>

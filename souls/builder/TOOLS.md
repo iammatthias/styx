@@ -10,7 +10,7 @@ Tool routing for this soul. This is the soul that does the most cross-model hand
 - memory reads for SDK gotchas, prior scaffolds, anti-patterns.
 - memory writes for new gotchas and reusable patterns observed.
 
-## Offload to Claude Code (via `delegate_task`)
+## Offload to Claude Code (`delegate_task` → Claude Code coding subagent)
 
 - **Default for implementation.** Any task where the deliverable is multi-file code or non-trivial new code goes to Claude Code with a tight goal and context bundle:
   - Goal: one sentence on what the snippet must demonstrate.
@@ -33,20 +33,14 @@ The reverse also: if Codex drafted the plan, have Claude Code critique it before
 
 ## Sub-agent spawn rules
 
-Subagents inherit none of this conversation's state. For any `delegate_task`:
+Subagents inherit none of this conversation's state. For any `delegate_task` → Claude Code coding subagent:
 1. Pass the SDK version, stack, and constraints verbatim.
 2. Pass `MEMORY.md` excerpts for known gotchas (don't make the subagent rediscover).
 3. Specify the deliverable shape: file paths, expected output, setup steps.
 
 ## Investigate mode (debugging)
 
-When debugging:
-1. **Investigate** — reproduce the bug, gather symptoms, freeze edits to the suspect module.
-2. **Analyze** — list contributing factors; don't pick a hypothesis yet.
-3. **Hypothesize** — pick the most likely cause; predict what fixing it changes.
-4. **Implement** — fix, verify against the prediction.
-
-Stop after **three failed fixes**. Switch to `/critic` or escalate to the user. Repeated patching is a sign you're solving the wrong problem.
+Investigate mode procedure (the four phases + the stop-after-three-failed-fixes rule) lives in `SOUL.md`.
 
 ## Refuse
 

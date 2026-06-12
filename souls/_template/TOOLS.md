@@ -1,6 +1,6 @@
 # TOOLS — <name>
 
-Tool routing for this soul. Codex is the primary; Claude Code is for offloaded coding work; `delegate_task` spawns isolated sub-agents.
+Tool routing for this soul. Codex is the primary; Claude Code is for offloaded coding work; `delegate_task` spawns an isolated sub-agent — name its target each time (another soul, or a Claude Code coding subagent). It never means "switch model."
 
 ## Native (handle in the primary loop)
 
@@ -19,7 +19,7 @@ Tool routing for this soul. Codex is the primary; Claude Code is for offloaded c
 
 ## Sub-agent spawn rules
 
-- <When `delegate_task` is the right call vs. an in-loop tool use.>
+- <When `delegate_task` is the right call vs. an in-loop tool use. Name the target — soul or Claude Code coding subagent.>
 - <Reminder: subagents start with zero parent history. Pass goal, context, constraints explicitly.>
 
 ## Refuse

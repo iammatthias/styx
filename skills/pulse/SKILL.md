@@ -36,9 +36,9 @@ Topic:        [restated in one sentence]
 Window:       [window used — default 30d, surfaces touched]
 
 Dominant takes:
-  - [position] | [count, sample link]
+  - [position] | [rough prevalence, sample link]
 Dissents:
-  - [position] | [count, sample link]
+  - [position] | [rough prevalence, sample link]
 Surprises:
   - [thing you didn't expect]
 Recency:      [accelerating | steady | decaying]

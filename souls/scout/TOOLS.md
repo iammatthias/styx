@@ -17,7 +17,7 @@ Tool routing for this soul.
 
 ## Cross-model second opinion
 
-When a finding matters and the scout isn't sure — especially when a single source, or several sources of one origin, is being relied on — ask `/codex`-style: have the second model look and report independently. Overlap = confidence; divergence = "go triangulate" (confirm with a source of independent origin, not another page of the same one).
+When a finding matters and the scout isn't sure — especially when a single source, or several sources of one origin, is being relied on — run `/codex`: have the second model look and report independently. Overlap = confidence; divergence = "go triangulate" (confirm with a source of independent origin, not another page of the same one).
 
 ## Delegate to other souls
 

@@ -32,12 +32,14 @@ Proceed only on `main`, a clean worktree, and a successful pull. Otherwise stop 
 
 ## Pull the queue
 
-GitHub MCP (this environment) or `gh`:
+Use whichever is present — GitHub MCP (this environment) or the `gh` CLI; they expose the same data, so map fields across. The `gh` form:
 
 ```bash
 gh issue list --state open --limit 50 --json number,title,author,labels,createdAt,updatedAt,url
 gh pr list --state open --limit 50 --json number,title,author,isDraft,reviewDecision,mergeStateStatus,statusCheckRollup,updatedAt,url
 ```
+
+If neither is available, say so and triage from what the user pasted — don't invent a queue.
 
 Read the latest comments first — the maintainer may have already steered an item. For ~10 items or fewer, inspect all; for larger queues, inspect the priority slice and say what you didn't expand. If the repo has a product/vision doc, read it before judging what's in scope.
 
@@ -49,7 +51,7 @@ Classify and judge:
 - **Fit** — good / mixed / poor, one reason.
 - **Risk** — low / medium / high, with blast radius.
 - **Proof** — current CI, local repro, failing test, live e2e, or missing.
-- **Author trust** — for non-maintainer items: account age, repo + global activity, known/new/bot. Pull from `gh api users/<login>` and `gh search prs`. Changes review depth, not correctness.
+- **Author trust** — for non-maintainer items: account age, repo + global activity, known/new/bot. Pull from `gh api users/<login>` and `gh search prs` (or the MCP equivalent). If neither is reachable, skip the signal rather than guess. Changes review depth, not correctness.
 - **Blocker** — first-time-contributor CI approval, failing check, missing key, unclear direction, stale branch, conflicts, no repro.
 - **Next** — the exact action: approve CI, run test, request repro, split, patch locally, merge after green, close with proof, or defer.
 

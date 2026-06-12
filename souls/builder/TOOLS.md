@@ -20,7 +20,7 @@ Tool routing for this soul. This is the soul that does the most cross-model hand
 - Bug investigation that requires reading more than ~3 files of source.
 - Refactors of any size.
 
-## Cross-model review (`/codex`-style pattern)
+## Cross-model review (via `/codex`)
 
 When stakes warrant a second opinion on a Claude Code diff: feed the diff back to Codex (this loop) for an independent review pass. Overlap = high confidence; divergence = a question worth asking before shipping.
 

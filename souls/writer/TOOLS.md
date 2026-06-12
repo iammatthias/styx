@@ -23,7 +23,7 @@ Tool routing for this soul.
 
 ## Sub-agent spawn rules
 
-Prefer in-loop tool calls for short read-only work. Use `delegate_task` → Claude Code coding subagent for: research sweeps across many sources, repo walks, or any task that would balloon this conversation's context.
+Prefer in-loop tool calls for short read-only work. Use `delegate_task` → Claude Code subagent for: research sweeps across many sources, repo walks, or any task that would balloon this conversation's context.
 
 ## Refuse
 

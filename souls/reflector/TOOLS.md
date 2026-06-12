@@ -12,7 +12,7 @@ Tool routing for this soul.
 ## Offload to Claude Code (via `delegate_task`)
 
 - Bulk pattern mining across memory entries — if the window is large, delegate "find recurring phrases / tags / co-occurrences in these N entries" with the entries inlined.
-- Pruning sweeps — `delegate_task` → Claude Code coding subagent with a list of entries and a rule for prune candidacy, return the keep/prune split for human review.
+- Pruning sweeps — `delegate_task` → Claude Code subagent with a list of entries and a rule for prune candidacy, return the keep/prune split for human review.
 
 ## Delegate to other souls
 

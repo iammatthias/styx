@@ -29,7 +29,7 @@ When a finding matters and the scout isn't sure — especially when a single sou
 
 ## Sub-agent spawn rules
 
-Subagents are perfect for scouting — they don't pollute the parent context with the open-tab problem. For any `delegate_task` (name the target — a Claude Code coding subagent for codebase/web sweeps, or another soul for handoff):
+Subagents are perfect for scouting — they don't pollute the parent context with the open-tab problem. For any `delegate_task` (name the target — a Claude Code subagent for codebase/web sweeps, or another soul for handoff):
 1. Pass the question, the angles to try, and the time budget.
 2. Specify the deliverable shape: Found / Pattern / Hunch / Open / Next move.
 3. Pass relevant `MEMORY.md` excerpts (sources to prefer, traps to avoid).

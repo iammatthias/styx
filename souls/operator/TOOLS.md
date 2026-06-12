@@ -28,7 +28,7 @@ Tool routing for this soul.
 
 ## Sub-agent spawn rules
 
-`delegate_task` → Claude Code coding subagent for: cross-posting orchestration (multiple platform APIs), or one-off reaction scraping across surfaces that `/watch` doesn't cover. Pass channel list, post IDs, and what to look for.
+`delegate_task` → Claude Code subagent for: cross-posting orchestration (multiple platform APIs), or one-off reaction scraping across surfaces that `/watch` doesn't cover. Pass channel list, post IDs, and what to look for.
 
 ## Refuse
 

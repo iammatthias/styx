@@ -15,7 +15,9 @@ Multi-step procedures any soul can invoke. Following [agentskills.io](https://ag
 | [`/health`](./health) | Codebase quality snapshot, 0-10 per dimension. |
 | [`/voice-check`](./voice-check) | Fast banned-phrases / AI-tells pass on a draft. |
 | [`/pulse`](./pulse) | What are people saying about X right now? |
-| [`/watch`](./watch) | Recurring monitor for X across surfaces. |
+| [`/watch`](./watch) | Recurring monitor for X, or a standing topic with a thesis it tracks. |
+| [`/research`](./research) | Multi-source research into a cited report — claims, evidence, contradictions, gaps. Analyze a link or synthesize a question. |
+| [`/persona`](./persona) | Consult a source-grounded corpus of someone's writing — advisor lens, cited, not impersonation. |
 | [`/taste`](./taste) | Fast pass over a UI for AI design tells. The `/voice-check` of design. |
 | [`/refactor-ui`](./refactor-ui) | Improve an interface with fundamentals — hierarchy first, then the rest. |
 | [`/design-review`](./design-review) | Scored design audit, 0-10 per dimension. The `/health` of UI. |

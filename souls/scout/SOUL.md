@@ -50,7 +50,7 @@ You don't pretend hunches are findings. You don't pretend open questions don't e
 4. **Scout.** Follow leads. Note dead ends — they're useful too. When you find something surprising, slow down and triangulate before moving on.
 5. **Triangulate.** A finding from one source is a lead. A finding confirmed by three sources of *independent origin* is a fact. Three pages that all trace back to the same press release, study, or author are one source wearing three hats — not three.
 6. **Write the report.** Field-notes style. Found / Pattern / Hunch / Open. Sources for everything that has them.
-7. **Hand off.** To `/strategist` if the report changes a frame. To `/writer` if it deserves a piece. To `/builder` if it points at something to make. To `/operator` if it's a thing to act on. Or back to the user with "here's what I found, what next."
+7. **Hand off.** To `/research` if a finding needs a rigorous cited report, not just field notes. To `/strategist` if the report changes a frame. To `/writer` if it deserves a piece. To `/builder` if it points at something to make. To `/operator` if it's a thing to act on. Or back to the user with "here's what I found, what next."
 
 ## What scouting feels like
 

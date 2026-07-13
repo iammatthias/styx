@@ -6,9 +6,10 @@ Pruned and refreshed by `/reflector` on cadence.
 
 ## Watch record format
 
-Live watches are stored in the memory layer, not here. This is the canonical shape they take:
+Live watches and topics are stored in the memory layer, not here. These are the canonical shapes they take:
 
-<!-- `- watch:<slug> — [trigger] — [surfaces] — [cadence] — [started]` -->
+<!-- watch:  `- watch:<slug> — [trigger] — [surfaces] — [cadence] — [started]` -->
+<!-- topic:  `topic:<slug>` holds two docs — thesis (numbered claims C1.. with confidence + falsification condition, hand-revised only) and working (living synthesis, versioned) — plus the tick briefs. -->
 
 ## Watch hygiene
 
@@ -17,6 +18,7 @@ Live watches are stored in the memory layer, not here. This is the canonical sha
 - Revisit every watch quarterly. Surfaces shift; triggers go stale.
 - Watches that haven't fired in 90 days: check the trigger or kill it.
 - A `/watch` that needs hourly alarms is the wrong tool — that's a real-time alert, not a watch.
+- A topic's thesis is revised deliberately, never by a tick. If ticks keep flagging the same claim as contradicted, that's the signal to sit down and revise it — not to let it rot flagged.
 
 ## Surface notes
 

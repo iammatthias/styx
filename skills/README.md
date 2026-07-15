@@ -20,6 +20,7 @@ Multi-step procedures any soul can invoke. Following [agentskills.io](https://ag
 | [`/persona`](./persona) | Consult a source-grounded corpus of someone's writing — advisor lens, cited, not impersonation. |
 | [`/taste`](./taste) | Fast pass over a UI for AI design tells. The `/voice-check` of design. |
 | [`/refactor-ui`](./refactor-ui) | Improve an interface with fundamentals — hierarchy first, then the rest. |
+| [`/motion`](./motion) | Motion craft — when to animate and when not, easing, duration, springs, exact values. The motion pass. |
 | [`/design-review`](./design-review) | Scored design audit, 0-10 per dimension. The `/health` of UI. |
 | [`/layers`](./layers) | Find which layer is actually broken before you polish the surface. |
 | [`/skill-cleaner`](./skill-cleaner) | Audit skills + souls for description budget, duplicates, orphans, drift. |

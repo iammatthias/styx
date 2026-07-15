@@ -24,10 +24,10 @@ Run `/taste` before adding anything. Log the hits. You fix slop; you don't compo
 
 ## 5. Work the fundamentals
 
-In order — this is `/refactor-ui`'s spine:
+In order — `/refactor-ui` is the spine for the static passes, `/motion` for the motion pass:
 
 - Hierarchy → type → color → spacing → shadow → states → motion.
-- Don't skip to color. Motion is the finish, last. Don't add it without a reduced-motion path.
+- Don't skip to color. Motion is the finish, last — hand it to `/motion`. Don't add it without a reduced-motion path.
 - Keep a changelog as you go: each move plus the principle behind it.
 
 ## 6. Render

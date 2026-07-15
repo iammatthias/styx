@@ -32,7 +32,7 @@ doesn't just disable styx, it crashes Hermes config loading and takes the whole
 agent down. Souls and skills are linked (a dangling skill link just fails to
 load, which is harmless). If anything breaks, `./install.sh doctor` repairs it.
 
-You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), twenty-nine skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/research`, `/persona`, `/taste`, `/refactor-ui`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/cache-audit`, `/handoff`, `/plan`, `/worktrees`, `/document`), and the base soul active by default.
+You now have the eight souls (`/strategist`, `/writer`, `/builder`, `/designer`, `/scout`, `/critic`, `/operator`, `/reflector`), thirty skills (`/browse`, `/friction`, `/scrape`, `/skillify`, `/codex`, `/document-release`, `/health`, `/voice-check`, `/pulse`, `/watch`, `/research`, `/persona`, `/taste`, `/refactor-ui`, `/motion`, `/design-review`, `/layers`, `/skill-cleaner`, `/pr-review`, `/cli-design`, `/domains`, `/to-markdown`, `/triage`, `/image-gen`, `/wrangler`, `/cache-audit`, `/handoff`, `/plan`, `/worktrees`, `/document`), and the base soul active by default.
 
 Optional [Claude Code hooks](./hooks) wire two of styx's ideas into the harness — a SessionStart that surfaces the last `/handoff`, and a PreToolUse guard that enforces the base soul's "careful" primitive. Install them with `./install.sh hooks`. Hermes doesn't need them; `HEARTBEAT.md` and the safety primitives cover the same ground.
 
@@ -86,6 +86,7 @@ styx/
 │   ├── persona/            # source-grounded advisor lens, cited
 │   ├── taste/              # AI design tells pass
 │   ├── refactor-ui/        # apply design fundamentals
+│   ├── motion/             # motion craft — easing, duration, springs
 │   ├── design-review/      # scored UI audit
 │   ├── layers/             # find the broken layer
 │   ├── skill-cleaner/      # audit skills + souls for budget, dupes, drift

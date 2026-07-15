@@ -19,7 +19,7 @@ This is the `/voice-check` of design — a mechanical pass for the tells that sc
 ## When NOT to use
 
 - Deep, scored critique → `/design-review`.
-- Actually fixing the hits → `/refactor-ui`.
+- Actually fixing the hits → `/refactor-ui`; fixing *motion* hits with the right curves, durations, and springs → `/motion`.
 - "Is the underlying concept right?" → `/layers`. Taste can't fix a broken conceptual model.
 
 ## What it checks
@@ -30,7 +30,7 @@ Reads the seed tells list in `souls/designer/MEMORY.md` (grouped by domain — t
 - **Color** — purple→blue gradients; pure black (`#000`) text or background; untinted grays; gray text on a colored fill; an accent used on everything so nothing stands out.
 - **Shadow** — the default `box-shadow` glow on every card; dark glows; one elevation for everything; shadow used where proximity would do.
 - **Layout** — cards nested in cards; *everything* wrapped in a card; the generated-landing-page skeleton (numbered "step" lists + bullet stacks, identical rounded feature cards, the same outline+fill button pair); decorative blinking-dot status badges where nothing is live; centered-everything with no real hierarchy; borders doing a job whitespace should.
-- **Motion** — bounce / elastic easing (dated); no `prefers-reduced-motion` path; default 150ms-on-everything; motion with no purpose.
+- **Motion** — `ease-in` on UI (sluggish; entering/exiting wants `ease-out`); bounce / elastic easing where nothing was flicked (dated); `scale(0)` entrances (things appearing from nothing); `transform-origin: center` on a trigger-anchored popover/dropdown; `transition: all`; animating layout props (`width`/`height`/`top`/`left`/`margin`) instead of `transform`/`opacity`; `@keyframes` on rapidly-triggered UI (toasts, toggles) that should be interruptible; no `prefers-reduced-motion` path; 150ms-on-everything; animation on a keyboard/100+/day action; motion with no purpose. Fixes and exact values → `/motion`.
 - **Space** — values not on a scale (13px, 27px); cramped padding; touch targets under 44px.
 - **Copy** — `Lorem ipsum` left in; "Submit" / "Click here" labels; empty states that are just blank; error text that blames the user.
 

@@ -16,7 +16,7 @@ Use `[[wikilinks]]` for entity refs. Pruned and refreshed by `/reflector` on cad
 
 **Layout** — cards nested inside cards; everything wrapped in a card; the generated-landing-page skeleton (numbered "step" lists + bullet stacks, identical rounded feature cards, the same outline+fill button pair); decorative blinking-dot status badges where nothing is live; centered-everything with no real hierarchy; borders doing a job whitespace should.
 
-**Motion** — bounce / elastic easing (dated); no `prefers-reduced-motion` path; 150ms-on-everything; motion with no purpose.
+**Motion** — `ease-in` on UI; bounce/elastic where nothing was flicked (dated); `scale(0)` entrances; `transform-origin: center` on trigger-anchored popovers; `transition: all`; animating layout props over `transform`/`opacity`; `@keyframes` on rapid UI that should be interruptible; no `prefers-reduced-motion` path; 150ms-on-everything; animating a keyboard/100+/day action; motion with no purpose. (Motion craft — the decision framework, exact curves/durations/springs, the ten standards — lives in `/motion`; don't duplicate it here.)
 
 **Space** — values off any scale (13px, 27px); cramped padding; touch targets under 44px.
 
